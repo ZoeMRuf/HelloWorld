@@ -1,0 +1,69 @@
+body{
+    //font-family: 'Anek Tamil', Helvetica, Verdana, sans-serif; /* Googel Font: Anek Tamil */
+    background-color: ivory;
+}
+
+h1 {
+    text-align: center;
+    //display: inline;
+    font-family: 'Zen Loop', cursive;
+}
+
+textarea {
+    width: 100%;
+}
+
+@media screen and (max-width:400px) {
+    #overall-impression-smaller {
+        font-size: xx-small;
+    }
+}
+
+fieldset{
+    width: auto;
+    //border: 4px solid #ff99cc;
+    //border-radius: 9px;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+p {
+    width: auto;
+    border: 0px;
+    padding: 0px;
+    margin: 20px;
+}
+
+tr {
+    text-align: center;
+}
+
+tr > :first-child { /* Select and style the first child element of every <tr> element */
+    text-align: left;
+}
+
+legend {
+    //background: #ff99cc;
+    border-radius: 9px;
+    padding: 5px;
+}
+
+#email, #homepage, #birthday {
+    width: 100%;
+    padding: 2px;
+    margin: 1px;
+    font-family: 'Anek Tamil', Helvetica, Verdana, sans-serif; /* Googel Font: Anek Tamil */
+}
+
+button {
+    //width: 100%;
+    //border: 4px solid #ff99cc;
+    //border-radius: 9px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+
+
