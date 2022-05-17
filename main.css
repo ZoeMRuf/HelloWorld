@@ -26,15 +26,16 @@ header h1 {
     font-size: 90px;
     font-weight: bold;
     border: 5px  lightsteelblue;
-    padding: 0 10px;
     border-radius: 20px;
+    padding: 0 10px;
+
 
 }
 
 section img {
     width: 110px;
     height: 110px;
-    border: 5px dotted orange;
+    border: 5px dotted lightsteelblue;
     border-radius: 50%;
 
 }
