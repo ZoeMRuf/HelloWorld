@@ -17,7 +17,7 @@ textarea {
 
 fieldset{
     width: auto;
-    border: 5px dotted lightsteelblue;
+    border: 5px dotted #f9c80e;;
     font-family: 'Kalam', cursive;
     font-size: 17px;
     border-radius: 15px;
@@ -44,7 +44,7 @@ tr > :first-child { /* Select and style the first child element of every <tr> el
 }
 
 legend {
-    background: lightsteelblue;
+    background: #f9c80e;;
     border-radius: 10px;
     padding: 5px;
     font-family: 'Kalam', cursive;
@@ -63,8 +63,8 @@ legend {
 button {
     margin-left: 5%;
     width: 90%;
-    background-color: lightsteelblue;
-    border: 4px solid lightsteelblue;
+    background-color: #f9c80e;
+    border: 4px solid #f9c80e;
     font-size: 30px;
     font-family: 'Zen Loop', cursive;
     font-weight: bold;

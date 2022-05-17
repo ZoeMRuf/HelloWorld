@@ -22,10 +22,10 @@ header h1 {
     position: relative;
     text-align: center;
     font-family: 'Zen Loop', cursive;
-    background-color: lightsteelblue;
+    background-color: #aeaeae;
     font-size: 90px;
     font-weight: bold;
-    border: 5px  lightsteelblue;
+    border: 5px  #aeaeae;
     border-radius: 20px;
     padding: 0 10px;
 
@@ -33,9 +33,158 @@ header h1 {
 }
 
 section img {
-    width: 110px;
-    height: 110px;
-    border: 5px dotted lightsteelblue;
+    width: 120px;
+    height: 120px;
+    border: 5px dotted #aeaeae;
     border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 10px 35px 10px 0;
+    list-style: none;
+}
+
+nav li {
+    padding: 15px;
+    font-family: "Amatic SC", cursive;
+    font-size: 35px;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav li a {
+    color: white;
+}
+
+nav li:nth-child(1) {background-color: #2d93ad; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(2) {background-color: #52528c; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(3) {background-color: #ca2e55; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(4) {background-color: #c2e812; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(5) {background-color: #f9c80e; border-radius: 10px; flex: 1; margin: 3px}
+
+h2 {
+    font-family: "Amatic SC", cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Amatic SC", cursive;
+    font-size: 40px;
+}
+
+p {
+    font-family: Kalam, cursive;
+    font-size: 20px;
+}
+
+section div {
+    margin: 5px 30px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3";
+    //text-align: center;
+
+}
+
+section div:nth-child(1){grid-area: a1;}
+section div:nth-child(2){grid-area: a2; }
+section div:nth-child(3){grid-area: a3; }
+
+section article h3 {
+    text-align: center;
+}
+
+.block {
+    border: 5px dotted #2d93ad;;
+    border-radius: 15px;
+    margin: 0 5px;
+    padding: 0 15px;
+}
+
+em {
+    font-weight: bolder;
+}
+
+#Start {
+    margin-top: 5%;
+}
+
+#Start p {
+    text-align: center;
+}
+
+#Start label {
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+}
+
+#email, #homepage, #birthdate {
+    font-family: 'Kalam', cursive;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#Start fieldset {
+    border: 5px dotted #52528c;;
+    border-radius: 15px;
+    width: 37%;
+    margin: 0 30% 20px 30%;
+
+
+}
+
+#Start legend {
+    font-family: "Amatic SC", cursive;
+    font-size: 40px;
+    padding: 10px 15px;
+    background-color: #52528c;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+#Start-Button {
+    background-color: #52528c;
+    color: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    font-size: 50px;
+    font-family: "Zen Loop", cursive;
+    font-weight: bold;
+    padding: 15px 0;
+    width: 50%;
+    margin: 0 25%;
+}
+
+#Start-Button:hover{
+    background-color: white;
+    color: #52528c;
+    border: 5px dotted #52528c;;
+    border-radius: 15px;
+    font-size: 50px;
+    font-family: "Zen Loop", cursive;
+    font-weight: bold;
+    padding: 15px 0;
+    width: 50%;
+    margin: 0 25%;
 }
