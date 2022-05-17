@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="images/icon.png" rel="icon"><!-- Icon for the Tab-Window -->
+    <link href="images/Icon.png" rel="icon"><!-- Icon for the Tab-Window -->
     <title>HelloWorld</title><!-- Name for the Tab-Window -->
 
     <link href="main.css" rel="stylesheet"><!-- Link to CSS-Stylesheet -->
@@ -27,27 +27,67 @@
 </head>
 <body style="overflow: auto">
     <header id="header">
-        <h1>- HelloWorld! -</h1>
-        <input type="button" value="Login">
-        <img src="images/img.png">
+        <h1>HelloWorld</h1>
 
     </header>
     <nav id="nav">
         <ul>
-            <li>About the Project</li>
-            <li>GoogleEarth</li>
-            <li>Get Started</li>
-            <li>About the Team</li>
-            <li>Feedback</li>
+            <li><a href="#Project">About the Project</a></li>
+            <li><a href="#Start">Get Started</a></li>
+            <li><a href="#Team">About the Team</a></li>
+            <li><a href="https://www.google.com/intl/de/earth/" target="_blank">GoogleEarth</a></li>
+            <li><a>Feedback</a></li>
         </ul>
     </nav>
     <main id="main">
+        <section id="Project">
+            <h2>About the Project</h2>
+            <img src="images/Project.png">
+            <article>
+                <h3>Why?</h3>
 
+            </article>
+            <article>
+                <h3>What?</h3>
+
+            </article>
+            <article>
+                <h3>How?</h3>
+            </article>
+
+        </section>
+        <section id="Start">
+            <h2>Get Started</h2>
+
+        </section>
+        <section id="Team">
+            <h2>About the Team</h2>
+            <img src="images/Team.png">
+            <article>
+                <h3>Lukas Ledl</h3>
+            </article>
+            <article>
+                <h3>Melanie Maurer</h3>
+            </article>
+            <article>
+                <h3>Daniel Obatola</h3>
+            </article>
+            <article>
+                <h3>Zoe Ruf</h3>
+            </article>
+
+        </section>
     </main>
     <aside id="aside">
 
     </aside>
     <footer id="footer">
+        <p>&copy; HelloWorld</p>
+        <address>
+            Written by <a href="mailto:marlene.z.ruf@gmail.com">Marlene Zoe Ruf</a><br>
+            Visit us at: <a href="https://www.fh-campuswien.ac.at/">FH Campus Vienna</a><br>
+            1100 Vienna, Austria<br>
+        </address>
 
     </footer>
 </body>
