@@ -16,6 +16,7 @@ header::before {
     bottom: 0;
     left: 0;
     filter: grayscale(100%);
+    border-radius: 10px;
 }
 
 header h1 {
@@ -28,16 +29,15 @@ header h1 {
     border: 5px  #aeaeae;
     border-radius: 20px;
     padding: 0 10px;
-
-
 }
 
-section img {
+img {
     width: 120px;
     height: 120px;
     border: 5px dotted #aeaeae;
     border-radius: 50%;
     display: block;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,7 +55,6 @@ nav li {
     padding: 15px;
     font-family: "Amatic SC", cursive;
     font-size: 35px;
-
 }
 
 a {
@@ -74,8 +73,10 @@ nav li a {
 nav li:nth-child(1) {background-color: #2d93ad; border-radius: 10px; flex: 1; margin: 3px}
 nav li:nth-child(2) {background-color: #52528c; border-radius: 10px; flex: 1; margin: 3px}
 nav li:nth-child(3) {background-color: #ca2e55; border-radius: 10px; flex: 1; margin: 3px}
-nav li:nth-child(4) {background-color: #c2e812; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(4) {background-color: #e28413; border-radius: 10px; flex: 1; margin: 3px}
 nav li:nth-child(5) {background-color: #f9c80e; border-radius: 10px; flex: 1; margin: 3px}
+
+/* Cool Green Color #c2e812*/
 
 h2 {
     font-family: "Amatic SC", cursive;
@@ -89,7 +90,7 @@ h3 {
 }
 
 p {
-    font-family: Kalam, cursive;
+    font-family: "Kalam", cursive; /*'Helvetica'*/
     font-size: 20px;
 }
 
@@ -99,7 +100,7 @@ section div {
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "a1 a2 a3";
-    //text-align: center;
+    text-align: center;
 
 }
 
@@ -147,10 +148,9 @@ em {
 #Start fieldset {
     border: 5px dotted #52528c;;
     border-radius: 15px;
-    width: 37%;
-    margin: 0 30% 20px 30%;
-
-
+    width: 35%;
+    display: block;
+    margin: 0 auto 5% auto;
 }
 
 #Start legend {
@@ -173,7 +173,8 @@ em {
     font-weight: bold;
     padding: 15px 0;
     width: 50%;
-    margin: 0 25%;
+    display: block;
+    margin: 0 auto 0 auto;
 }
 
 #Start-Button:hover{
@@ -186,5 +187,6 @@ em {
     font-weight: bold;
     padding: 15px 0;
     width: 50%;
-    margin: 0 25%;
+    display: block;
+    margin: 0 auto 0 auto;
 }

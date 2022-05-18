@@ -1,16 +1,12 @@
-body{
-    //font-family: 'Anek Tamil', Helvetica, Verdana, sans-serif; /* Googel Font: Anek Tamil */
-    background-color: ivory;
-}
-
 h1 {
     text-align: center;
-    //display: inline;
+    font-size: 70px;
     font-family: 'Zen Loop', cursive;
 }
 
 textarea {
     width: 100%;
+    font-family: 'Kalam', cursive;
 }
 
 @media screen and (max-width:400px) {
@@ -21,18 +17,22 @@ textarea {
 
 fieldset{
     width: auto;
-    //border: 4px solid #ff99cc;
-    //border-radius: 9px;
+    border: 5px dotted #f9c80e;;
+    font-family: 'Kalam', cursive;
+    font-size: 17px;
+    border-radius: 15px;
     padding: 10px;
     margin: 20px;
 }
 
 
-p {
+h2 {
+    font-family: "Amatic SC", "Californian FB", cursive;
+    font-size: 40px ;
     width: auto;
     border: 0px;
     padding: 0px;
-    margin: 20px;
+    margin: 20px 50px;
 }
 
 tr {
@@ -44,25 +44,37 @@ tr > :first-child { /* Select and style the first child element of every <tr> el
 }
 
 legend {
-    //background: #ff99cc;
-    border-radius: 9px;
+    background: #f9c80e;;
+    border-radius: 10px;
     padding: 5px;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
 }
+
 
 #email, #homepage, #birthday {
     width: 100%;
     padding: 2px;
     margin: 1px;
-    font-family: 'Anek Tamil', Helvetica, Verdana, sans-serif; /* Googel Font: Anek Tamil */
+    font-family: 'Kalam', cursive;
+    font-size: 17px;
 }
 
 button {
-    //width: 100%;
-    //border: 4px solid #ff99cc;
-    //border-radius: 9px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    width: 80%;
+    background-color: #f9c80e;
+    border: 4px solid #f9c80e;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: 'Zen Loop', cursive;
+    font-weight: bold;
     padding-bottom: 5px;
     padding-top: 5px;
-    font-weight: bold;
+
 }
 
 
