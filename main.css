@@ -90,7 +90,7 @@ h3 {
 }
 
 p {
-    font-family: "Kalam", cursive; /*'Helvetica'*/
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
 }
 
@@ -132,14 +132,14 @@ em {
 }
 
 #Start label {
-    font-family: 'Kalam', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
     width: 100%;
-    font-weight: bold;
+    font-weight: bold; //???????
 }
 
 #email, #homepage, #birthdate {
-    font-family: 'Kalam', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     width: 100%;
     margin-bottom: 20px;
@@ -192,6 +192,7 @@ em {
 }
 
 address {
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #aeaeae;
     border-radius: 10px;
     padding: 5px 10px;
