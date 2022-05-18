@@ -190,3 +190,9 @@ em {
     display: block;
     margin: 0 auto 0 auto;
 }
+
+address {
+    background-color: #aeaeae;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
