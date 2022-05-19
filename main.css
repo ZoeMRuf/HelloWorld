@@ -141,7 +141,7 @@ em {
     font-weight: bold; //???????
 }
 
-#email, #homepage, #birthdate {
+#email, #password {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     width: 100%;
