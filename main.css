@@ -110,6 +110,7 @@ section div:nth-child(1){grid-area: a1;}
 section div:nth-child(2){grid-area: a2; }
 section div:nth-child(3){grid-area: a3; }
 
+
 section article h3 {
     text-align: center;
 }
@@ -198,4 +199,28 @@ address {
     background-color: #aeaeae;
     border-radius: 10px;
     padding: 5px 10px;
+}
+
+@media screen and (max-width: 500px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        margin: 10px 35px 10px 0;
+        list-style: none;
+    }
+
+    section div {
+        margin: 5px 30px;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+                "a1"
+                "a2"
+                "a3";
+        text-align: center;
+    }
+
 }
