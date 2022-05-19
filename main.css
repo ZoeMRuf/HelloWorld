@@ -46,15 +46,16 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    text-align: center;
     margin: 10px 35px 10px 0;
-    list-style: none;
 }
 
 nav li {
+    width: 200px;
     padding: 15px;
     font-family: "Amatic SC", cursive;
     font-size: 35px;
+    text-align: center;
+    list-style: none;
 }
 
 a {
@@ -63,6 +64,7 @@ a {
 }
 
 a:hover {
+    font-style: italic;
     text-decoration: underline;
 }
 
@@ -76,7 +78,7 @@ nav li:nth-child(3) {background-color: #ca2e55; border-radius: 10px; flex: 1; ma
 nav li:nth-child(4) {background-color: #e28413; border-radius: 10px; flex: 1; margin: 3px}
 nav li:nth-child(5) {background-color: #f9c80e; border-radius: 10px; flex: 1; margin: 3px}
 
-/* Cool Green Color #c2e812*/
+/* Cool Green Color #c2e812 #44546a*/
 
 h2 {
     font-family: "Amatic SC", cursive;
@@ -100,7 +102,7 @@ section div {
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "a1 a2 a3";
-    text-align: center;
+    //text-align: center;
 
 }
 
