@@ -51,8 +51,6 @@ nav ul {
     list-style: none;
 }
 
-
-
 nav li {
     padding: 15px;
     font-family: "Amatic SC", cursive;
@@ -201,7 +199,11 @@ address {
     padding: 5px 10px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+    header::before {
+        background-size: auto;
+    }
+
     nav ul {
         display: flex;
         flex-direction: column;
@@ -209,6 +211,10 @@ address {
         text-align: center;
         margin: 10px 35px 10px 0;
         list-style: none;
+    }
+
+    .block {
+        margin: 5px 5px;
     }
 
     section div {
