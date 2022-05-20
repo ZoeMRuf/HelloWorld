@@ -211,7 +211,7 @@ address {
         flex-direction: column;
         justify-content: space-evenly;
         text-align: center;
-        margin: 10px 35px 10px 0;
+        margin: 10px 35px 10px 110px;
         list-style: none;
     }
 
