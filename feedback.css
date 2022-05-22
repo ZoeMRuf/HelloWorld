@@ -27,6 +27,7 @@ fieldset{
 
 
 h2 {
+    display: inline;
     font-family: "Amatic SC", "Californian FB", cursive;
     font-size: 40px ;
     width: auto;
@@ -76,13 +77,24 @@ legend {
 }
 
 button{
-    display: block;
+    display: inline;
     margin: 0 auto 0 auto;
-    font-size: 20px;
-    border: 4px solid #f9c80e;
+    font-size: 40px;
+    background-color: #f9c80e;
+    border: 3px solid #f9c80e;
     border-radius: 10px;
-    font-family: 'Zen Loop', cursive;
-    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+}
+
+button:hover{
+    display: inline;
+    margin: 0 auto 0 auto;
+    font-size: 40px;
+    background-color: white;
+    border: 3px dotted #f9c80e;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+
 }
 
 

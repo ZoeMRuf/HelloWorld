@@ -23,7 +23,11 @@
 </head>
 <body>
 <h1>Your Account</h1>
-<h2>Please give use some Information about you. So you can use all the features of our Maps.</h2>
+
+<h2>Please give use some Information about you. So you can use all the features of our Maps.
+    <button onclick="history.back()">Go Back</button>
+</h2>
+
 <form action="main.html">
 
     <fieldset>
@@ -50,14 +54,13 @@
     <fieldset>
         <legend>Login Data</legend>
         <label for="username">Username</label>
-        <input id="username" type="text">
+        <input id="username" type="text" required>
         <label for="password">Password</label>
-        <input id="password" type="password">
+        <input id="password" type="password" required>
         <label for="repeatPassword">Repeat Password</label>
-        <input id="repeatPassword" type="password">
+        <input id="repeatPassword" type="password" required>
     </fieldset>
     <input id="submit" type="submit" value="Create your Account">
-    <button onclick="history.back()">Go Back</button>
 </form>
 </body>
 </html>
