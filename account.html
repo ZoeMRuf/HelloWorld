@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="account.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Account</title>
+
+    <!-- Imported Fond Nr.1 "Amatic SC" for headers (h1,...) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Imported Fond Nr.2 "Kalam" for normal text (p,...) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Imported Fond Nr.3 "Zen Loop" for the Website Title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Imported Fond Nr.4 "Source Sans Pro" for normal text (p,...) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Your Account</h1>
+<h2>Please give use some Information about you. So you can use all the features of our Maps.</h2>
+<form action="main.html">
+
+    <fieldset>
+        <legend>Personal Data</legend>
+        <label for="firstName">First Name</label>
+        <textarea id="firstName" placeholder="Max"></textarea>
+        <label for="lastName">Last Name</label>
+        <textarea id="lastName" placeholder="Musterman"></textarea>
+        <label for="birthday">Date of Birth</label>
+        <input id="birthday" type="date">
+    </fieldset>
+    <fieldset>
+        <legend>Profession</legend>
+        <select>
+            <option>Lecturer (University)</option>
+            <option>Teacher (School)</option>
+            <option>Student (University)</option>
+            <option>Student (School)</option>
+            <option>Others</option>
+        </select>
+    </fieldset>
+    <input id="submit" type="submit" value="Create your Account">
+</form>
+</body>
+</html>
