@@ -32,9 +32,9 @@ legend {
     font-size: 20px;
 }
 
-#firstName, #lastName, #birthday, section{
+input, label, select {
     width: 100%;
-    height: 21px;
+    height: 26px;
     padding: 2px;
     margin: 1px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -45,6 +45,7 @@ legend {
     display: block;
     margin: 0 auto 5% auto;
     width: 80%;
+    height: auto;
     background-color: #ca2e55;
     color: white;
     border: 4px solid #ca2e55;

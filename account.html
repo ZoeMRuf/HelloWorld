@@ -11,11 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Imported Fond Nr.2 "Kalam" for normal text (p,...) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
-
     <!-- Imported Fond Nr.3 "Zen Loop" for the Website Title -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,9 +29,11 @@
     <fieldset>
         <legend>Personal Data</legend>
         <label for="firstName">First Name</label>
-        <textarea id="firstName" placeholder="Max"></textarea>
+        <input id="firstName" type="text" placeholder="Max"/>
         <label for="lastName">Last Name</label>
-        <textarea id="lastName" placeholder="Musterman"></textarea>
+        <input id="lastName" type="text" placeholder="Musterman"/>
+        <label for="email">E-Mail</label>
+        <input id="email" type="email" placeholder="max.musterman@gmx.com">
         <label for="birthday">Date of Birth</label>
         <input id="birthday" type="date">
     </fieldset>
@@ -49,6 +46,15 @@
             <option>Student (School)</option>
             <option>Others</option>
         </select>
+    </fieldset>
+    <fieldset>
+        <legend>Login Data</legend>
+        <label for="username">Username</label>
+        <input id="username" type="text">
+        <label for="password">Password</label>
+        <input id="password" type="password">
+        <label for="repeatPassword">Repeat Password</label>
+        <input id="repeatPassword" type="password">
     </fieldset>
     <input id="submit" type="submit" value="Create your Account">
 </form>
