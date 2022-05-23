@@ -1,14 +1,41 @@
+body {
+    background-color: slategray;
+}
+
 h1 {
+    color: white;
     text-align: center;
     font-size: 70px;
     font-family: 'Zen Loop', cursive;
 }
 
 h2 {
+    color: white;
     font-family: "Amatic SC", "Californian FB", cursive;
     font-size: 40px ;
     width: auto;
     border: 0px;
     padding: 0px;
     margin: 20px 50px;
+}
+
+button{
+    display: inline;
+    margin: 0 auto 0 auto;
+    font-size: 40px;
+    background-color: #c2e812;
+    border: 3px solid #c2e812;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+}
+
+button:hover{
+    display: inline;
+    margin: 0 auto 0 auto;
+    font-size: 40px;
+    background-color: slategray;
+    border: 3px dotted #c2e812;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+
 }
