@@ -141,7 +141,7 @@ em {
     font-weight: bold;
 }
 
-#email, #password {
+#SignInEmail, #SignInPassword {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     width: 100%;
