@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,17 +17,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
 
-
-
+// SignIn
 const SignInForm = document.querySelector("#SignIn");
 
 SignInForm.addEventListener('submit', (event) => {
-    //event.preventDefault() // -> so page does not refresh
+    event.preventDefault() // -> so page does not refresh
 
     //Get User Information from Form
 
@@ -35,7 +34,17 @@ SignInForm.addEventListener('submit', (event) => {
 
     //Test if eventListener works
     console.log(email, password);
+
+    createUserWithEmailAndPassword(auth, email, password).then(credential => {
+
+        console.log(credential);
+    })
 })
+
+// CreateAccount
+
+
+
 
 
 

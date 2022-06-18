@@ -7,7 +7,7 @@
     <title>HelloWorld</title><!-- Name for the Tab-Window -->
 
     <link href="home.css" rel="stylesheet"><!-- Link to CSS-Stylesheet -->
-    <script src="auth.js"></script><!-- Link to Authentication JavaScript Code -->
+    <script type="module" src="module_auth.js"></script><!-- Link to Authentication JavaScript Code -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- To make the Browser-Window Responsive -->
 
     <!-- Imported Fond Nr.1 "Amatic SC" for headers (h1,...) -->
@@ -99,7 +99,7 @@
                     <label for="SignInPassword">Password:</label>
                     <input type="password" id="SignInPassword" name="password" required>
                 </fieldset>
-                <input id="Start-Button" type="submit" value="Let's Go" onclick="signInWithEmailAndPassword()">
+                <input id="Start-Button" type="submit" value="Let's Go">
                 <p><a href="account.html">Create an Account</a></p>
             </form>
         </section>
@@ -119,8 +119,6 @@
             1100 Vienna, Austria<br>
         </address>
     </footer>
-
-
 
 </body>
 </html>
