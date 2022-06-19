@@ -29,7 +29,6 @@ CreateAccountForm.addEventListener('submit', (event) => {
     event.preventDefault() // -> so page does not refresh
 
     //Get User Information from Form
-
     const email = CreateAccountForm['email'].value;
     const password = CreateAccountForm['password'].value;
 
@@ -39,6 +38,7 @@ CreateAccountForm.addEventListener('submit', (event) => {
     createUserWithEmailAndPassword(auth, email, password).then(credential => {
 
         console.log(credential.user);
+
 
         //Go to main Backend
         window.location.href = "main.html";
