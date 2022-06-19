@@ -37,5 +37,8 @@ button:hover{
     border: 3px dotted #c2e812;
     border-radius: 10px;
     font-family: 'Amatic SC', cursive;
-
+}
+#map{
+    height: 500px;
+    width: 100%;
 }
