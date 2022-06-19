@@ -39,7 +39,7 @@ CreateAccountForm.addEventListener('submit', (event) => {
         // only now create account
         createUserWithEmailAndPassword(auth, email, password).then(credential => {
 
-            /*
+            /* Does send email to Span ACHTUNG
             sendEmailVerification(auth.currentUser)
             .then(() => {
                 console.log("send email");
