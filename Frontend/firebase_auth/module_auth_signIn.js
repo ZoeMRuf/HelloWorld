@@ -28,16 +28,12 @@ SignInForm.addEventListener('submit', (event) => {
     event.preventDefault() // -> so page does not refresh
 
     //Get User Information from Form
-
     const email = SignInForm['SignInEmail'].value;
     const password = SignInForm['SignInPassword'].value;
 
-    //Test if eventListener works
-    //console.log(email, password);
-
     signInWithEmailAndPassword(auth, email, password).then(credential => {
 
-        console.log(credential);
+        //console.log(credential);
 
         if (credential.operationType === "signIn"){
             window.location.href = "main.html"
@@ -48,9 +44,12 @@ SignInForm.addEventListener('submit', (event) => {
         const errorCode = error.code;
         const errorMessage = error.message;
 
+        //For Developer to see what's wrong
+        console.log(errorCode, errorMessage);
+
+        //For User Message if Sign in is not possible
         const SignInFieldset = document.querySelector("#SignInFieldset");
 
-        //For now, we will need visual errorMessage on page later
         if (errorCode === "auth/wrong-password"){
 
             const wrongPassword = document.createElement('p');
@@ -66,11 +65,6 @@ SignInForm.addEventListener('submit', (event) => {
             wrongEmail.style.color = '#ca2e55';
 
             SignInFieldset.insertBefore(wrongEmail, SignInForm['SignInEmail']);
-
         }
-
-        //Problem text does not go away + page refresh ?
     });
 })
-
-

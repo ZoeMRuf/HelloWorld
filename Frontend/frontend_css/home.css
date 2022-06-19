@@ -8,7 +8,7 @@ header {
 
 header::before {
     content: "";
-    background-image: url("images/HeadderBackground.png");
+    background-image: url("../images/HeadderBackground.png");
     background-size: 100% 100%;
     position: absolute;
     top: 0;

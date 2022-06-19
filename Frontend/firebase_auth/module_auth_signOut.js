@@ -22,10 +22,10 @@ const auth = getAuth(app);
 
 
 // SignOut
+const SignOutButton = document.querySelector("#SignOut");
 
-const SignOutButtoen = document.querySelector("#SignOut");
-
-SignOutButtoen.addEventListener('click', (event) => {
+SignOutButton.addEventListener('click', (event) => {
+    event.preventDefault();
 
     signOut(auth).then(() => {
         // Sign-out successful. Go back to Home Page.
@@ -33,9 +33,6 @@ SignOutButtoen.addEventListener('click', (event) => {
         window.location.href = "home.html";
     }).catch((error) => {
         // An error happened.
-        event.preventDefault();
-        console.log("error");
+        console.log(error.code, error.message);
     });
-
-
 })
