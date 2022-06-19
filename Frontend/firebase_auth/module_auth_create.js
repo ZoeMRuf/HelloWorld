@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, updateEmail, sendEmailVerification} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,7 +24,7 @@ const user = auth.currentUser;
 
 // CreateAccount
 const CreateAccountForm = document.querySelector("#CreateAccount");
-const CAFieldsetPassword = document.querySelector("#createAccountFieldset-password");
+const CAFieldset = document.querySelector("#createAccountFieldset");
 
 CreateAccountForm.addEventListener('submit', (event) => {
     event.preventDefault() // -> so page does not refresh
@@ -39,7 +39,7 @@ CreateAccountForm.addEventListener('submit', (event) => {
         // only now create account
         createUserWithEmailAndPassword(auth, email, password).then(credential => {
 
-            /* Does send email to Span ACHTUNG
+            /* Does send email to Spam ACHTUNG
             sendEmailVerification(auth.currentUser)
             .then(() => {
                 console.log("send email");
@@ -58,6 +58,8 @@ CreateAccountForm.addEventListener('submit', (event) => {
         .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+
+                console.log(errorCode, errorMessage);
         });
     }
     else {
@@ -66,7 +68,7 @@ CreateAccountForm.addEventListener('submit', (event) => {
         wrongPassword.textContent = "Wrong Password! Passwords must be identical. Pleas try again.";
         wrongPassword.style.color = '#ca2e55';
 
-        CAFieldsetPassword.insertBefore(wrongPassword, CAFieldsetPassword['password']);
+        CAFieldset.insertBefore(wrongPassword, CAFieldset['password']);
     }
 })
 

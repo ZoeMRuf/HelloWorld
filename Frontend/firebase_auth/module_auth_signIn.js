@@ -32,9 +32,7 @@ SignInForm.addEventListener('submit', (event) => {
     const password = SignInForm['SignInPassword'].value;
 
     signInWithEmailAndPassword(auth, email, password).then(credential => {
-
         //console.log(credential);
-
         if (credential.operationType === "signIn"){
             window.location.href = "main.html"
         }
