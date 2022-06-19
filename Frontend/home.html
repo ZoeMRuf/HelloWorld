@@ -7,7 +7,7 @@
     <title>HelloWorld</title><!-- Name for the Tab-Window -->
 
     <link href="home.css" rel="stylesheet"><!-- Link to CSS-Stylesheet -->
-    <script type="module" src="module_auth.js"></script><!-- Link to Authentication JavaScript Code -->
+    <script type="module" src="module_auth_signIn.js"></script><!-- Link to Authentication JavaScript Code -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- To make the Browser-Window Responsive -->
 
     <!-- Imported Fond Nr.1 "Amatic SC" for headers (h1,...) -->
@@ -91,8 +91,8 @@
         <section id="Start">
             <h2>Get Started</h2>
             <p>Please note that we need some information, for you to be able to use this website. <br>The login questions must be answered!</p>
-            <form id="SignIn" > <!-- action="main.html"-->
-                <fieldset>
+            <form id="SignIn">
+                <fieldset id="SignInFieldset">
                     <legend>Login</legend>
                     <label for="SignInEmail">eMail:</label>
                     <input type="email" id="SignInEmail" name="email" placeholder="user@example.com" required>
