@@ -18,7 +18,7 @@ header h1 {
     font-weight: bold;
     border-radius: 20px;
     padding: 0;
-    margin: 0 42% 0 42% ;
+    margin: 0 40% 0 40% ;
 }
 
 #SignOut {
@@ -41,6 +41,10 @@ header h1 {
     border: 3px dotted #c2e812;
     border-radius: 10px;
     font-family: 'Amatic SC', cursive;
+}
+
+ion-icon {
+    font-size: 40px;
 }
 
 nav ul {
@@ -76,5 +80,27 @@ nav li:nth-child(5) {background-color: #f9c80e; border-radius: 10px; flex: 1; ma
 }
 
 aside p{
+
+}
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        text-align: center;
+        font-family: 'Zen Loop', cursive;
+        background-color: #aeaeae;
+        font-size: 50px;
+        font-weight: bold;
+        border-radius: 20px;
+        padding: 0;
+        margin: 0 42% 0 42% ;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 10px 0 10px 0;
+    }
 
 }
