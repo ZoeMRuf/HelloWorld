@@ -6,6 +6,7 @@ const port = process.env.PORT ?? 3000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'Frontend')));
+app.use(express.static(path.join(__dirname, 'Frontend/frontend_html')));
 app.use('/', startRoute);
 
 app.listen(port, (error)=>{
