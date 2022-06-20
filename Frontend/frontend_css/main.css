@@ -150,6 +150,25 @@ p {
     font-size: 20px;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+
+}
+
+a:hover {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+address {
+    font-family: 'Source Sans Pro', sans-serif;
+    //background-color: #aeaeae;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
 @media screen and (max-width: 600px) {
 
     header h1 {
