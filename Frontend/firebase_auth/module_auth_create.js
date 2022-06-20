@@ -72,5 +72,5 @@ CreateAccountForm.addEventListener('submit', (event) => {
     }
 })
 
-// und daten von accout sollen auf firebase gespeichert werden
+// daten von accout sollen auf firebase gespeichert werden
 

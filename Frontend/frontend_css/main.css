@@ -2,25 +2,28 @@ body {
     background-color: slategray;
 }
 
-h1 {
-    color: white;
+header {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header h1 {
     text-align: center;
-    font-size: 70px;
     font-family: 'Zen Loop', cursive;
+    background-color: #aeaeae;
+    font-size: 90px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0 42% 0 42% ;
 }
 
-h2 {
-    color: white;
-    font-family: "Amatic SC", "Californian FB", cursive;
-    font-size: 40px ;
-    width: auto;
-    border: 0px;
-    padding: 0px;
-    margin: 20px 50px;
-}
-
-button{
+#SignOut {
     display: inline;
+    float: right;
     margin: 0 auto 0 auto;
     font-size: 40px;
     background-color: #c2e812;
@@ -29,8 +32,9 @@ button{
     font-family: 'Amatic SC', cursive;
 }
 
-button:hover{
+#SignOut:hover{
     display: inline;
+    float: right;
     margin: 0 auto 0 auto;
     font-size: 40px;
     background-color: slategray;
@@ -38,6 +42,34 @@ button:hover{
     border-radius: 10px;
     font-family: 'Amatic SC', cursive;
 }
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 35px 10px 0;
+}
+
+nav li {
+    width: 200px;
+    padding: 15px;
+    font-family: "Amatic SC", cursive;
+    font-size: 35px;
+    text-align: center;
+    list-style: none;
+}
+
+nav li a {
+    color: white;
+}
+
+nav li:nth-child(1) {background-color: #2d93ad; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(2) {background-color: #52528c; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(3) {background-color: #ca2e55; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(4) {background-color: #e28413; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(5) {background-color: #f9c80e; border-radius: 10px; flex: 1; margin: 3px}
+
+
 #map{
     height: 500px;
     width: 100%;
