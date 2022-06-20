@@ -21,37 +21,69 @@ header h1 {
     margin: 0 40% 0 40% ;
 }
 
+#ICON {
+    display: inline;
+    float: right;
+    margin: 0 auto 0 auto;
+    border: 5px solid slategray;
+    border-radius: 10px;
+    font-size: 40px;
+
+}
+
 #SignOut {
     display: inline;
     float: right;
-    margin: 0 auto 0 auto;
-    font-size: 40px;
-    background-color: #c2e812;
-    border: 3px solid #c2e812;
+    margin: 0 5px 0 auto;
+    border: 5px solid slategray;
     border-radius: 10px;
-    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    color: #262626;
 }
 
-#SignOut:hover{
+#SignOut:hover {
     display: inline;
     float: right;
-    margin: 0 auto 0 auto;
-    font-size: 40px;
-    background-color: slategray;
-    border: 3px dotted #c2e812;
+    margin: 0 5px 0 auto;
+    border: 5px solid #c2e812;
     border-radius: 10px;
-    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    color: #262626;
+    background-color: #c2e812;
 }
 
-ion-icon {
-    font-size: 40px;
+#Delete {
+    display: inline;
+    float: right;
+    margin: 0 5px 0 auto;
+    border: 8px solid slategray;
+    border-radius: 10px;
+    font-size: 35px;
+    color: #262626;
+}
+
+#Delete:hover {
+    display: inline;
+    float: right;
+    margin: 0 5px 0 auto;
+    border: 8px solid #262626;
+    border-radius: 10px;
+    font-size: 35px;
+    color: floralwhite;
+    background-color: #262626;
+}
+
+
+
+nav{
+    padding: 5px 0 5px 0;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 10px 35px 10px 0;
+    margin: 5px 4% 5px 2%;
 }
 
 nav li {
@@ -67,20 +99,55 @@ nav li a {
     color: white;
 }
 
-nav li:nth-child(1) {background-color: #2d93ad; border-radius: 10px; flex: 1; margin: 3px}
-nav li:nth-child(2) {background-color: #52528c; border-radius: 10px; flex: 1; margin: 3px}
-nav li:nth-child(3) {background-color: #ca2e55; border-radius: 10px; flex: 1; margin: 3px}
-nav li:nth-child(4) {background-color: #e28413; border-radius: 10px; flex: 1; margin: 3px}
-nav li:nth-child(5) {background-color: #f9c80e; border-radius: 10px; flex: 1; margin: 3px}
+nav li:nth-child(1) {background-color: #262626; border-radius: 10px; flex: 1; margin: 5px}
+nav li:nth-child(2) {background-color: #262626; border-radius: 10px; flex: 1; margin: 5px}
+nav li:nth-child(3) {background-color: #262626; border-radius: 10px; flex: 1; margin: 5px}
+nav li:nth-child(4) {background-color: #262626; border-radius: 10px; flex: 1; margin: 5px}
+nav li:nth-child(5) {background-color: #262626; border-radius: 10px; flex: 1; margin: 5px}
 
+/* Green: #c2e812
+   Light Blue: #2d93ad
+   Dark Blue: #2d93ad
+   Red: #ca2e55
+   Orange: #e28413
+   Yellow: #f9c80e
+
+   Dark Red: #c2e812
+ */
+
+nav ul li:hover {
+    background-color: #89043d;
+}
 
 #map{
     height: 500px;
     width: 100%;
+    border-radius: 15px;
 }
 
-aside p{
+aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "c1 c2";
+}
 
+
+aside div:nth-child(1) {grid-area: c1}
+aside div:nth-child(2) {grid-area: c2}
+
+
+aside div {
+    border: 5px dotted #262626;
+    border-radius: 15px;
+    margin: 15px 10px;
+    padding: 10px 15px;
+    color: floralwhite;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 600px) {

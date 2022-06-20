@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
-import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+import { getAuth, deleteUser} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -21,4 +21,17 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 
-//Listern for changes
+//Delete User
+const DeleteButton = document.querySelector("#Delete");
+
+DeleteButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    deleteUser(auth.currentUser).then(() => {
+        //Go back to Home Page.
+        window.location.href = "home.html";
+    }).catch((error) => {
+        // An error happened.
+        console.log(error.code, error.message);
+    });
+})
