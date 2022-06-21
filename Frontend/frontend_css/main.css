@@ -234,15 +234,4 @@ address {
         justify-content: space-evenly;
         margin: 10px 0 10px 0;
     }
-
-    aside {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-                "c1"
-                "c2";
-        justify-content: space-evenly;
-    }
-
 }
