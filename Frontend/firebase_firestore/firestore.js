@@ -51,7 +51,6 @@ class DatabaseAccess{
 
 
 // Adding a Map
-/ Adding a Map
     addMap(title, creator, creationDate, pathToImage, height, description, graticule, distortion, usage, limitations, id) {
         setDoc(doc(db,'Maps', id), {
             title: title,
