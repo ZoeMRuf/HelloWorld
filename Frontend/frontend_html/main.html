@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../frontend_css/main.css">
-    <script type="module" src="../firebase_auth/module_auth_signOut.js"></script><!-- Link to Authentication JavaScript Code -->
-    <script type="module" src="../firebase_auth/module_auth_deleteUser.js"></script>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Maps</title>
+
+    <!-- Links vor Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="../frontend_css/main.css"><!-- Link to CSS-Stylesheet -->
+    <script type="module" src="../firebase_auth/module_auth_signOut.js"></script><!-- Link to Authentication JavaScript Code -->
+    <script type="module" src="../firebase_auth/module_auth_deleteUser.js"></script><!-- Link to Authentication JavaScript Code -->
 
     <!-- Imported Fond Nr.1 "Amatic SC" for headers (h1,...) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,19 +27,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
     <!-- To display the Mapbox map -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 </head>
-<body style="overflow: auto">
+<body style="overflow: auto" class = "container">
 
 <header>
     <div id="ICON">
         <ion-icon id="Delete" name="trash" value="Delete Account"></ion-icon>
         <ion-icon id="SignOut" name="log-out"></ion-icon>
     </div>
-
-
     <h1>Maps</h1>
 </header>
 <nav>
@@ -56,39 +56,59 @@
         <li><a>MAP 9</a></li>
         <li><a>MAP 10</a></li>
     </ul>
-    <ul>
-        <li><a>MAP 11</a></li>
-        <li><a>MAP 12</a></li>
-        <li><a>MAP 13</a></li>
-        <li><a>MAP 14</a></li>
-        <li><a>MAP 15</a></li>
-    </ul>
-
 </nav>
 <main>
-    <div id="map"></div>
-    <script src="../main.js" defer></script>
+    <section>
+        <div id="map"></div>
+        <script src="../main.js" defer></script>
+    </section>
+    <section id="MapImages">
+        <div>
+            <article id="country1" class="block">
 
+                <h3>Country:</h3>
+                <p>A Geography student and a Computer-Science student come into a bar...</p>
+                <p>... all two-dimensional Maps of the World must deal with the problem of "projection".
+                    Due to the three-dimensional nature of the earth, it is not possible to reproduce
+                    a world map exactly in two dimensions.
+                </p>
+                <p>While this is true of any map, these distortions reach extremes in a world map.
+                    Many techniques have been developed to create world maps that address diverse
+                    technical and aesthetic goals.
+                </p>
+                <p><a href="https://youtu.be/eTYsIePy5zg" target="_blank">Learn More ...</a></p>
+
+            </article>
+            <article id="country2" class="block">
+                <h3>Country:</h3>
+                <p>The Information that can be displayed on a Map is huge! </p>
+                <p><em>Political</em> maps emphasize territorial boundaries and human settlement. <em>Physical</em> maps show
+                    geographical features such as mountains, soil type, or land use. <em>Geological</em> maps show not
+                    only the surface, but characteristics of the underlying rock, fault lines, and subsurface structures.
+                    <em>Choropleth</em> maps use color hue and intensity to contrast differences between regions, such as
+                    demographic or economic statistics.
+                </p>
+                <p>And much more ...</p>
+                <p>With our Project we want to create awareness to the fact that the traditional Maps we all know are incorrect in
+                    many important points. Also, we want to create an interactive World Map where the user can choose the
+                    information mose relevant for them to show on the Map.
+                </p>
+                <p><a href="https://de.wikipedia.org/wiki/Weltkarte" target="_blank">Learn More ...</a></p>
+
+            </article>
+        </div>
+
+    </section>
 </main>
 <aside>
     <!-- For Information Display below the Maps -
     organized in dives and article, so I can use grid to organize the information -->
 
-    <div id="country1">
-        <article>
-            <p>BBBBBBBBBBBddddddd</p>
-            <p>BBBBBBBBBBBBBBBBBBAAA</p>
-            <p>BBBBBBBBBBBBAAAAA</p>
-            <p>BBBBBBBBBBBBBBBBBBBAAAAA</p>
-        </article>
-    </div>
-    <div id="country2">
-        <article>
+    <div >
 
-            <p>BBBBBBBBBBBBBBBBBBAAA</p>
-            <p>BBBBBBBBBBBBAAAAA</p>
-            <p>BBBBBBBBBBBBBBBBBBBAAAAA</p>
-        </article>
+    </div>
+    <div >
+
     </div>
 
 

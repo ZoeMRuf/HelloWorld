@@ -8,7 +8,6 @@ header {
     display: block;
     align-items: center;
     justify-content: center;
-
 }
 
 header h1 {
@@ -29,7 +28,6 @@ header h1 {
     border: 5px solid slategray;
     border-radius: 10px;
     font-size: 40px;
-
 }
 
 #SignOut {
@@ -89,7 +87,7 @@ nav li {
     width: 200px;
     padding: 15px;
     font-family: "Amatic SC", cursive;
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
     list-style: none;
 }
@@ -124,28 +122,49 @@ nav ul li:hover {
     border-radius: 15px;
 }
 
-aside {
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+/*
+#MapImages div:nth-child(1){grid-area: a1;}
+#MapImages div:nth-child(2){grid-area: a2; }
+
+ */
+
+h3 {
+    font-family: "Amatic SC", cursive;
+    font-size: 40px;
+}
+
+#country1{
+    grid-area: a1;
+    background-color: #262626;
+    color: floralwhite;
+}
+
+#country2{
+    grid-area: a2;
+    background-color: #262626;
+    color: floralwhite;
+}
+
+main #MapImages div{
+    margin: 10px 30px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "c1 c2";
-    justify-content: space-evenly;
+    grid-template-areas:
+            "a1 a2";
+    text-align: center;
 }
 
-
-aside div:nth-child(1) {grid-area: c1}
-aside div:nth-child(2) {grid-area: c2}
-
-
-aside div {
-    border: 5px dotted #262626;
+.block {
+    border: 5px dotted #1C77C3;
     border-radius: 15px;
-    margin: 15px 10px;
-    padding: 10px 15px;
-    color: floralwhite;
-    inline-size: 700px;
-    overflow-wrap: break-word;
-    background-color: #262626;
+    margin: 5px 5px;
+    padding: 0 15px;
 }
 
 /*
