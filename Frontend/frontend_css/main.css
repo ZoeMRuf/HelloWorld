@@ -137,12 +137,18 @@ aside div:nth-child(2) {grid-area: c2}
 
 
 aside div {
-    border: 5px dotted #262626;
+    border: 5px dotted #6E44FF;
     border-radius: 15px;
     margin: 15px 10px;
     padding: 10px 15px;
     color: floralwhite;
+    background-color: #262626;
 }
+
+/*
+#6E44FF
+#1C77C3
+ */
 
 p {
     font-family: 'Source Sans Pro', sans-serif;
