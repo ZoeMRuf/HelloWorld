@@ -12,7 +12,13 @@ routes.get('/feedback',function(req,res){
     res.sendFile(path.join(__dirname, '../../Frontend/frontend_html/feedback.html'));
 });
 
-routes.post('/map/:country', controller.createCountry);
+routes.get('/map/:id', controller.getCountry);
+
+routes.post('/map/:country/:id', controller.createCountry);
+
+routes.delete('/map/:id', controller.deleteCountry);
+
+routes.put('/map/:country', controller.updateCountry);
 
 
 module.exports = routes;
