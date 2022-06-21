@@ -1,0 +1,7 @@
+name: Gingery projection
+
+creation date: 1944
+
+creator: Walter G. Gingery 
+
+info: show the air routes from the U.S. to almost anywhere on the globe

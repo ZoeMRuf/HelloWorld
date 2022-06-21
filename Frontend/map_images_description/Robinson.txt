@@ -1,0 +1,7 @@
+name: Robinson projection
+
+creation date: 1963
+
+creator: Arthur H. Robinson 
+
+info: The Robinson projection is perhaps the most commonly used compromise pseudocylindrical map projection for world maps.

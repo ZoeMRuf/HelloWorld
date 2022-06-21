@@ -1,0 +1,7 @@
+name: Van der Grinten projection
+
+creation date: 1898
+
+creator: Alphons J. van der Grinten
+
+info: due to its circular look, the Van der Grinten I projection is very appealing for global maps. 
