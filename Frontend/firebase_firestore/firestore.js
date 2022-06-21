@@ -21,59 +21,77 @@ const db = getFirestore(app);
 // Initialize Reference to our Database
 const collectionReference = collection(db, 'Maps')
 
-
-// Get Data from our Database
-function getMaps(){
-    getDocs(collectionReference).then((snapshot) => {
-        let maps = [];
-        snapshot.docs.forEach((doc) => {
-            maps.push({...doc.data(), id: doc.id})
-        });
-
-        const res = JSON.stringify(maps);
-        console.log(maps);
-        return res
-
-    })
-     .catch(error => {
-            console.log(error.message)
-     })
-}
+class DatabaseAccess{
+    // Get Data from our Database
+    getMaps(req,res){
+        getDocs(collectionReference)
+            .then((snapshot) => {
+                res.send(JSON.stringify({
+                    id: snapshot.docs.id,
+                    data: snapshot.docs.data
+                }));
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
 
 
 //Get only one Map by ID
-function getMapById(id){
-    const documentReference = doc(db, 'Maps', id);
-    getDoc(documentReference).then((doc) => {
-        console.log(doc.id, doc.data());
-    })
-}
+    getMapById(req, res){
+        const id = req.params.id;
+        const documentReference = doc(db, 'Maps', id);
+        getDoc(documentReference).then((doc) => {
+            res.send(JSON.stringify({
+                id: doc.id,
+                data: doc.data
+            }));
+        })
+    }
 
 
 // Adding a Map
-function addMap(title, author, id) {
-    setDoc(doc(db,'Maps', id), {
-        title: title,
-        author: author
-    })
-    .then(() => {
-        getMaps();
-        //.reset????
-    })
-}
+/ Adding a Map
+    addMap(title, creator, creationDate, pathToImage, height, description, graticule, distortion, usage, limitations, id) {
+        setDoc(doc(db,'Maps', id), {
+            title: title,
+            creator: creator,
+            creationDate: creationDate,
+            Image: {
+                path: pathToImage,
+                height: height
+            },
+            infoText: {
+                description: description,
+                graticule: graticule,
+                distortion: distortion,
+                usage: usage,
+                limitations: limitations
+            }
+        })
+        .then(() => {
+            console.log("MapAdded")
+        })
+    }
 
 
 // DeleteMap
-function deleteMapById(id){
-    const documentReference = doc(db, 'Maps', id);
-    deleteDoc(documentReference).then(() => {
-            getMaps();
-        //something
-    })
+    deleteMapById(req, res){
+        const id = req.params.id;
+        const documentReference = doc(db, 'Maps', id);
+        deleteDoc(documentReference).then(() => {
+            res.send(200).send("Map was deleted");
+        })
+            .catch(error => {
+            res.send(404).send(error.message);
+        })
+
+    }
+
 
 }
 
-
+/*
 //realTimeListener for later
 onSnapshot(collectionReference, (snapshot) => {
     let maps = [];
@@ -83,6 +101,7 @@ onSnapshot(collectionReference, (snapshot) => {
     console.log(maps);
 })
 
-getMapById("01");
+ */
+
 
 
