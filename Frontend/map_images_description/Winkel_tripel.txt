@@ -1,7 +1,0 @@
-name: Winkel Tripel projection
-
-creation date: 1921
-
-creator: Oswald Winkel 
-
-info: The Winkel Tripel projection is appropriate for general world maps

@@ -47,3 +47,4 @@ class CountryModel{
 }
 const model = new CountryModel();
 module.exports = model;
+

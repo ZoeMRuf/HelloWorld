@@ -1,7 +1,0 @@
-name: Wagner IV projection
-
-creation date: 1932
-
-creator: Karl Heinrich (Karlheinz) Wagner 
-
-info: The projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas.
