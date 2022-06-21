@@ -217,3 +217,10 @@ address {
     }
 
 }
+
+#compare{
+    display: inline;
+    margin: 0 auto 0 auto;
+    height: 30px;
+    width: 10%;
+}

@@ -102,6 +102,10 @@ function setCountryName(name){
         let country1Area = document.getElementById("country1Area");
         let country1Continent = document.getElementById("country1Continent");
 
+        country1Population.textContent = "--";
+        country1Area.textContent = "--";
+        country1Continent.textContent = "--";
+
         country1 = true;
     }else if(country1 && !country2){
         let country2Name = document.getElementById("country2Name");
@@ -112,6 +116,10 @@ function setCountryName(name){
         let country2Area = document.getElementById("country2Area");
         let country2Continent = document.getElementById("country2Continent");
 
+        country2Population.textContent = "--";
+        country2Area.textContent = "--";
+        country2Continent.textContent = "--";
+
         country2 = true;
     }else if(!country1 && country2){
         let country1Name = document.getElementById("country1Name");
@@ -121,6 +129,10 @@ function setCountryName(name){
         let country1Population = document.getElementById("country1Population");
         let country1Area = document.getElementById("country1Area");
         let country1Continent = document.getElementById("country1Continent");
+
+        country1Population.textContent = "--";
+        country1Area.textContent = "--";
+        country1Continent.textContent = "--";
 
         country1 = true;
     }else{
@@ -201,9 +213,9 @@ function loadCountry(){
             let country1Area = document.getElementById("country1Area");
             let country1Continent = document.getElementById("country1Continent");
 
-            country1Population.textContent = data.population;
-            country1Area.textContent = data.area;
-            country1Continent.textContent = data.continent;
+            country1Population.textContent = "Population: " + data.population.toLocaleString('en-US');
+            country1Area.textContent = "Area: " + data.area.toLocaleString('en-US') + " \u33A2";
+            country1Continent.textContent = "Continent: " + data.continent;
         })
 
     fetch("http://localhost:3000/map/1")
@@ -213,9 +225,9 @@ function loadCountry(){
             let country2Area = document.getElementById("country2Area");
             let country2Continent = document.getElementById("country2Continent");
 
-            country2Population.textContent = data.population;
-            country2Area.textContent = data.area;
-            country2Continent.textContent = data.continent;
+            country2Population.textContent = "Population: " + data.population.toLocaleString('en-US');
+            country2Area.textContent = "Area: " + data.area.toLocaleString('en-US') + " \u33A2";
+            country2Continent.textContent = "Continent: " + data.continent;
         })
 
     /*
