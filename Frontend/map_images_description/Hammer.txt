@@ -1,0 +1,7 @@
+name: Hammer projection
+
+creation date: 1892 
+
+creator: Ernst von Hammer 
+
+info: appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas

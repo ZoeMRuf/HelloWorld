@@ -1,0 +1,7 @@
+name: Hermann Berghaus projection
+
+creation date: 1880
+
+creator: Hermann Berghaus 
+
+info: good for world maps

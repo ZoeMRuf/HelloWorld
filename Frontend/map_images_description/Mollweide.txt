@@ -1,0 +1,7 @@
+name: Mollweide projection
+
+creation date: 1805
+
+creator: Karl B. Mollweide 
+
+info: the Mollweide projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas.
