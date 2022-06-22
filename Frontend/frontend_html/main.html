@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Maps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/><!-- To make the Browser-Window Responsive -->
+    <link href="../images/Icon.png" rel="icon"><!-- Icon for the Tab-Window -->
+    <title>Maps</title><!-- Name for the Tab-Window -->
 
     <!-- Links vor Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -47,25 +48,25 @@
         <li><button id="02" class="btn">Berghaus Star</button></li>
         <li><button id="03" class="btn">Equal Earth</button></li>
         <li><button id="04" class="btn">Hammer</button></li>
-        <li><button id="05" class="btn">Mercator</button></li>
+
     </ul>
     <ul>
+        <li><button id="05" class="btn">Mercator</button></li>
         <li><button id="06" class="btn">Mollweide</button></li>
         <li><button id="07" class="btn">Robinson</button></li>
         <li><button id="08" class="btn">Van der Grinten</button></li>
-        <li><button id="09" class="btn">Wagner IV</button></li>
-        <li><button id="10" class="btn">Winkel Tripel</button></li>
+
     </ul>
     <ul>
-        <li><button id="11" class="btn">MAP</button></li>
-        <li><button id="12" class="btn">MAP</button></li>
-        <li><button id="13" class="btn">MAP</button></li>
-        <li><button id="14" class="btn">MAP</button></li>
-        <li><button id="15" class="btn">MAP</button></li>
+        <li><button id="09" class="btn">Wagner IV</button></li>
+        <li><button id="10" class="btn">Bonne</button></li>
+        <li><button id="11" class="btn">Sinusoidal</button></li>
+        <li><button id="12" class="btn">Winkel Tripel</button></li>
     </ul>
 </nav>
 <main>
     <section>
+        <h2>Interactive Map</h2>
         <div id="map"></div>
         <script src="../main.js" defer></script>
     </section>
@@ -105,7 +106,7 @@
 
                 <p id="mapCreationDate" class="bold"></p>
                 <p id="mapCreator" class="bold"></p>
-                <d>
+                <div>
                     <p class="bold">Description:</p>
                     <p id="mapDescription"></p>
                     <p class="bold">Distortion:</p>
@@ -114,10 +115,10 @@
                     <p id="mapGraticule"></p>
                     <p class="bold">Usage:</p>
                     <p id="mapUsage"></p>
-                </d>
+                </div>
             </article>
             <article id="MapImage" class="block">
-                <img id="mapImg" alt="different world maps ">
+                <img src="Frontend/images/Icon.png" id="mapImg" alt="different world maps ">
             </article>
         </div>
     </section>
