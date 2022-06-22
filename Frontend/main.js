@@ -293,8 +293,8 @@ btn.forEach(b => {
             const creator = document.getElementById('mapCreator');
 
             title.textContent = text.title;
-            creationDate.textContent = text.creationDate;
-            creator.textContent = text.creator;
+            creationDate.textContent = "Year of Creation: --- " + text.creationDate + " ---";
+            creator.textContent = "Author : --- " + text.creator + " ---";
 
             const description = document.getElementById('mapDescription');
             const distortion = document.getElementById('mapDistortion');
@@ -307,11 +307,52 @@ btn.forEach(b => {
             usage.textContent = text.usage;
 
             const Image = document.getElementById('mapImg');
-                Image.src = text.pathToImage;
-
+            Image.src = text.pathToImage;
 
         })
     })
 })
+
+document.addEventListener("DOMContentLoaded", function (event){
+
+
+    fetch(`http://localhost:3000/mapData/01`, {
+        method: 'POST',
+        body: JSON.stringify({}),
+        headers: {
+            Accept: 'application.json',
+            'Content-Type': 'application/json'
+        },
+        Cache: 'default'
+    })
+        .then(r => r.json())
+        .then(text => {
+
+            console.log(text.title);
+
+            const title = document.getElementById('mapTitle');
+            const creationDate = document.getElementById('mapCreationDate');
+            const creator = document.getElementById('mapCreator');
+
+            title.textContent = text.title;
+            creationDate.textContent = "Year of Creation: --- " + text.creationDate + " ---";
+            creator.textContent = "Author : --- " + text.creator + " ---";
+
+            const description = document.getElementById('mapDescription');
+            const distortion = document.getElementById('mapDistortion');
+            const graticule = document.getElementById('mapGraticule');
+            const usage = document.getElementById('mapUsage');
+
+            description.textContent = text.description;
+            distortion.textContent = text.distortion;
+            graticule.textContent = text.graticule;
+            usage.textContent = text.usage;
+
+            const Image = document.getElementById('mapImg');
+            Image.src = text.pathToImage;
+
+        })
+})
+
 
 

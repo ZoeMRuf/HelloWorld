@@ -161,7 +161,7 @@ h3 {
 }
 
 main #Countries div{
-    margin: 10px 30px;
+    margin: 10px 15px 10px 45px;
     padding-right: 60px;
     display: grid;
     grid-template-columns: auto;
@@ -185,7 +185,7 @@ main #Countries div{
 .clear {
     display: block;
     margin: 10px auto 10px auto;
-    width: 80%;
+    width: 100%;
     height: auto;
     background-color: #c2e812;
     color: #262626;
@@ -201,7 +201,7 @@ main #Countries div{
 .clear:hover {
     display: block;
     margin: 10px auto 10px auto;
-    width: 80%;
+    width: 100%;
     height: auto;
     background-color: white;
     color: #262626;
@@ -262,6 +262,14 @@ main #Countries div{
 
 #MapInfo p {
     color: white;
+}
+
+#MapInfo .bold {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Amatic SC",cursive;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 h2 {
