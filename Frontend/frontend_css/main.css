@@ -132,8 +132,6 @@ nav li:nth-child(5) {background-color: #262626; border-radius: 10px; flex: 1; ma
    Dark Red: #c2e812
  */
 
-
-
 #map{
     height: 500px;
     width: 100%;
@@ -164,8 +162,9 @@ h3 {
 
 main #Countries div{
     margin: 10px 30px;
+    padding-right: 60px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
             "a1 a2";
@@ -175,14 +174,13 @@ main #Countries div{
     border: 5px dotted #c2e812;
     border-radius: 15px;
     margin: 5px 5px;
-    padding: 0 15px;
+
 }
 
 .block article {
-    width: 100%;
+    width:70px;
     text-align: center;
     justify-content: center;
-
 }
 .clear {
     display: block;
