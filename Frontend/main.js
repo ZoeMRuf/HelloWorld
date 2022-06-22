@@ -85,4 +85,16 @@ map.on('load', () => {
     });
 });
 
+const btn = document.querySelectorAll(".btn");
+
+btn.forEach(button => {
+
+    button.addEventListener('click', (event) => {
+
+        console.log(event);
+
+    })
+
+})
+
 

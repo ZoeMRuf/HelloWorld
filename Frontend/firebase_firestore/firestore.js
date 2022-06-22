@@ -51,15 +51,12 @@ class DatabaseAccess{
 
 
 // Adding a Map
-    addMap(title, creator, creationDate, pathToImage, height, description, graticule, distortion, usage, limitations, id) {
+    addMap(title, creator, creationDate, pathToImage, description, graticule, distortion, usage, limitations, id) {
         setDoc(doc(db,'Maps', id), {
             title: title,
             creator: creator,
             creationDate: creationDate,
-            Image: {
-                path: pathToImage,
-                height: height
-            },
+            Image: pathToImage,
             infoText: {
                 description: description,
                 graticule: graticule,
@@ -86,21 +83,8 @@ class DatabaseAccess{
         })
 
     }
-
-
 }
 
-/*
-//realTimeListener for later
-onSnapshot(collectionReference, (snapshot) => {
-    let maps = [];
-    snapshot.docs.forEach((doc) => {
-        maps.push({...doc.data(), id: doc.id})
-    });
-    console.log(maps);
-})
-
- */
 
 
-
+DatabaseAccess.addMap("Autor","")
