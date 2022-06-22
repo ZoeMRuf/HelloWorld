@@ -29,7 +29,6 @@ SignOutButton.addEventListener('click', (event) => {
 
     signOut(auth).then(() => {
         // Sign-out successful. Go back to Home Page.
-        //history.back()
         window.location.href = "home.html";
     }).catch((error) => {
         // An error happened.
