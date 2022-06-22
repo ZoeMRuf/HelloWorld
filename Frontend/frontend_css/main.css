@@ -269,3 +269,10 @@ address {
         margin: 10px 0 10px 0;
     }
 }
+
+#compare{
+    display: inline;
+    margin: 2%;
+    height: 30px;
+    width: 10%;
+}
