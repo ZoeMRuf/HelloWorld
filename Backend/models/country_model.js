@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const maps = require('../../Data/Maps.json');
 
 class MapModel{
-    constructor(creationDate, creator, description, distortion, graticule, limitations, usage) {
+    constructor(creationDate, creator, description, distortion, graticule, limitations, usage, pathToImage, title) {
         this.creationDate = creationDate;
         this.creator = creator;
         this.description = description;
@@ -10,7 +10,8 @@ class MapModel{
         this.graticule = graticule;
         this.limitations = limitations;
         this.usage = usage;
-
+        this.pathToImage = pathToImage
+        this.title = title;
     }
 }
 
@@ -121,6 +122,9 @@ class Maps{
         this.implementedMapModel.graticule = maps[id].infoText.graticule;
         this.implementedMapModel.limitations = maps[id].infoText.limitations;
         this.implementedMapModel.usage = maps[id].infoText.usage;
+        this.implementedMapModel.pathToImage = maps[id].pathToImage;
+        this.implementedMapModel.title = maps[id].title;
+
         return this.getMapData();
     }
 
