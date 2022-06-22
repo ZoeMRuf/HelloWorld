@@ -28,44 +28,42 @@ class CountryModel{
         let lon = body.countryLng;
         let localState = body.id;
 
-        try{
-            fetch(`https://us1.locationiq.com/v1/reverse?key=${this.API_KEY}&lat=${lat}&lon=${lon}&format=json`)
-                .then((response) => {
-                    if(response.ok){
-                        return response.json();
-                    }
-                    throw new Error('Something went wrong')
-                })
-                .then((data) => {
-                    this.countryCode = data.address.country_code;
-                    return this.countryCode;
-                })
-                .catch((error) => {
-                    console.log("Something went wrong with the foreign API's")
-                })
-                .then(countryCode => {
-                    fetch(`https://restcountries.com/v3.1/alpha/${this.countryCode}`)
-                        .then((response) => {
-                            if (response.ok) {
-                                return response.json();
-                            }
-                            throw new Error('Something went wrong')
-                        })
-                        .then((output) => {
-                            this.countryInfos[localState].name = output[0].name.common;
-                            this.countryInfos[localState].population = output[0].population;
-                            this.countryInfos[localState].area = output[0].area;
-                            this.countryInfos[localState].continent = output[0].continents[0];
-                            this.countryInfos[localState].id = localState;
-                        })
-                        .catch((error) => {
-                            console.log("Something went wrong with the foreign API's")
-                        });
-                })
-            return "It worked";
-        }catch(e){
-            console.log("Something went wrong")
-        }
+        fetch(`https://us1.locationiq.com/v1/reverse?key=${this.API_KEY}&lat=${lat}&lon=${lon}&format=json`)
+            .then((response) => {
+                if(response.ok){
+                    return response.json();
+                }
+                throw new Error('Something went wrong')
+            })
+            .then((data) => {
+                this.countryCode = data.address.country_code;
+                return this.countryCode;
+            })
+            .catch((error) => {
+                this.countryCode = "none";
+                console.log("Something went wrong with the foreign API's 1");
+            })
+            .then(countryCode => {
+                fetch(`https://restcountries.com/v3.1/alpha/${this.countryCode}`)
+                    .then((response) => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                        throw new Error('Something went wrong')
+                    })
+                    .then((output) => {
+                        this.countryInfos[localState].name = output[0].name.common;
+                        this.countryInfos[localState].population = output[0].population;
+                        this.countryInfos[localState].area = output[0].area;
+                        this.countryInfos[localState].continent = output[0].continents[0];
+                        this.countryInfos[localState].id = localState;
+                    })
+                    .catch((error) => {
+                        this.deleteCountry(body.id);
+                        console.log("Something went wrong with the foreign API's")
+                    });
+            })
+        return "It worked";
     }
 
     getCountryInformation(id){
