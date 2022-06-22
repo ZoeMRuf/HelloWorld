@@ -1,17 +1,19 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVsLW8iLCJhIjoiY2w0bGgwNTd1MG0xZDNpcXA2Zjlva3MwNCJ9._1wzMXGbaJsD2BM5ZPd2zA';
-let state = false;
 let country1 = false;
-let country1lng = 0
-let country1lat = 0
 let country2 = false;
-let country2lng = 0
-let country2lat = 0
+
+
+let bounds = [
+    [-170, -80], // Southwest coordinates
+    [190, 85] // Northeast coordinates
+];
 
 const map = new mapboxgl.Map({container: 'map', // container ID
     style: 'mapbox://styles/mapbox/light-v10', // style
     center: [16.3, 48.2], // starting position [lng, lat]
     zoom: 3, // starting zoom
-    maxZoom: 6
+    maxZoom: 6,
+    maxBounds: bounds
     });
 
 
@@ -128,76 +130,25 @@ function setCountryName(name, lng, lat){
     }else{
         console.log("full");
     }
-
-
-    /*
-    state = !state;
-    console.log(name);
-    if(state){
-        let country1Name = document.getElementById("country1Name");
-        country1Name.textContent = name
-        displayCountryInfo(name);
-
-        let country1Population = document.getElementById("country1Population");
-        let country1Area = document.getElementById("country1Area");
-        let country1Continent = document.getElementById("country1Continent");
-
-        country1Population.textContent = "--";
-        country1Area.textContent = "--";
-        country1Continent.textContent = "--";
-    }else{
-        let country2Name = document.getElementById("country2Name");
-        country2Name.textContent = name;
-        displayCountryInfo(name);
-
-        let country2Population = document.getElementById("country2Population");
-        let country2Area = document.getElementById("country2Area");
-        let country2Continent = document.getElementById("country2Continent");
-
-        country2Population.textContent = "--";
-        country2Area.textContent = "--";
-        country2Continent.textContent = "--";
-    }
-
-     */
 }
 
 function displayCountryInfo(countryName, lng, lat) {
-    if(!country1){
-        fetch(`http://localhost:3000/map/${countryName}/0`, {
-            method: 'POST',
-            body: JSON.stringify({
-                'countryLng': `${lng}`,
-                'countryLat': `${lat}`
-            }),
-            headers: {
-                Accept: 'application.json',
-                'Content-Type': 'application/json'
-            },
-            Cache: 'default'
+    fetch(`http://localhost:3000/map/${countryName}`, {
+        method: 'POST',
+        body: JSON.stringify({
+            'countryLng': `${lng}`,
+            'countryLat': `${lat}`
+        }),
+        headers: {
+            Accept: 'application.json',
+            'Content-Type': 'application/json'
+        },
+        Cache: 'default'
+    })
+        .then(r => r.text())
+        .then(text => {
+            console.log(text);
         })
-            .then(r => r.text())
-            .then(text => {
-                console.log(text);
-            })
-    }else{
-        fetch(`http://localhost:3000/map/${countryName}/1`, {
-            method: 'POST',
-            body: JSON.stringify({
-                'countryLng': `${lng}`,
-                'countryLat': `${lat}`
-            }),
-            headers: {
-                Accept: 'application.json',
-                'Content-Type': 'application/json'
-            },
-            Cache: 'default'
-        })
-            .then(r => r.text())
-            .then(text => {
-                console.log(text);
-            })
-    }
 }
 
 
@@ -225,27 +176,6 @@ function loadCountry(){
             country2Area.textContent = "Area: " + data.area.toLocaleString('en-US') + " \u33A2";
             country2Continent.textContent = "Continent: " + data.continent;
         })
-
-    /*
-    fetch("http://localhost:3000/map/")
-        .then(r => r.json())
-        .then(data => {
-            if(data.id == 0){
-                let country1 = document.getElementById("country1_article");
-                let country1_info = document.createElement("p");
-                country1_info.textContent = data.name + "\n" + data.population + "\n" + data.area +  "\n" + data.continent;
-                country1.prepend(country1_info);
-                console.log(data);
-            }else if(data.id = 1){
-                let country2 = document.getElementById("country2_article");
-                let country2_info = document.createElement("p");
-                country2_info.textContent = data.name + "\n" + data.population + "\n" + data.area +  "\n" + data.continent;
-                country2.prepend(country2_info);
-                console.log(data);
-            }
-        })
-
-     */
 }
 
 const confirmButton = document.getElementById("compare");

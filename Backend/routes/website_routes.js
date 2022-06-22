@@ -14,7 +14,7 @@ routes.get('/feedback',function(req,res){
 
 routes.get('/map/:id', controller.getCountry);
 
-routes.post('/map/:country/:id', controller.createCountry);
+routes.post('/map/:country/', controller.createCountry);
 
 routes.delete('/map/:id', controller.deleteCountry);
 

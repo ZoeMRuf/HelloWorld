@@ -4,24 +4,18 @@ class CountryController{
     static MANDATORY = ["name", "population", "surface_area", "region"];
 
     checkCountry(){
-        return true;
+        model.checkCountry();
     }
     createCountry = (req, res) => {
-
-        if (this.checkCountry()) {
-            res.send(model.createCountry(req.params.country, req.params.id, req.body));
-        }
-
-        /*
         try {
-            if (this.checkCountry()) {
-                res.send(model.createCountry(req.params.country, req.params.id, req.body));
+            if (this.checkCountry) {
+                res.send(model.createCountry(req.params.country, req.body));
+            }else{
+                res.status(404).send(`There is already a country with this ID: ${req.params.id}`)
             }
         } catch (e) {
-            res.status(404).send("There is already a country");
+            res.status(404).send("Something went wrong");
         }
-
-         */
     }
 
     getCountry(req, res){
