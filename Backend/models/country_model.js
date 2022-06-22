@@ -1,8 +1,16 @@
 const fetch = require('node-fetch');
+const maps = require('../../Data/Maps.json');
 
-class Country{
-    constructor(name) {
-        this.name = name;
+class MapModel{
+    constructor(creationDate, creator, description, distortion, graticule, limitations, usage) {
+        this.creationDate = creationDate;
+        this.creator = creator;
+        this.description = description;
+        this.distortion = distortion;
+        this.graticule = graticule;
+        this.limitations = limitations;
+        this.usage = usage;
+
     }
 }
 
@@ -93,9 +101,44 @@ class CountryModel{
     checkCountry(){
         return !this.countryInfos.name.localeCompare("none");
     }
-
-
-
 }
+
+class Maps{
+    constructor() {
+        this.implementedMapModel = new MapModel();
+    }
+
+
+    getMapData(){
+        return this.implementedMapModel;
+    }
+
+    assignMapData(id){
+        this.implementedMapModel.creationDate = maps[id].creationDate;
+        this.implementedMapModel.creator = maps[id].creator;
+        this.implementedMapModel.description = maps[id].infoText.description;
+        this.implementedMapModel.distortion = maps[id].infoText.distortion;
+        this.implementedMapModel.graticule = maps[id].infoText.graticule;
+        this.implementedMapModel.limitations = maps[id].infoText.limitations;
+        this.implementedMapModel.usage = maps[id].infoText.usage;
+        return this.getMapData();
+    }
+
+    addMapData(id){
+
+        if(this.implementedMapModel !== undefined){
+            return this.assignMapData(id);
+        }
+
+    }
+
+    updateMapData(id){
+        return this.assignMapData(id);
+    }
+}
+
+
 const model = new CountryModel();
+const mapData = new Maps();
 module.exports = model;
+module.exports = mapData;
