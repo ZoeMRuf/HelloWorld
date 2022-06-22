@@ -43,18 +43,18 @@
 </header>
 <nav>
     <ul>
-        <li><button id="01" class="btn">MAP 1</button></li>
-        <li><button id="02" class="btn">MAP 2</button></li>
-        <li><button id="03" class="btn">MAP 3</button></li>
-        <li><button id="04" class="btn">MAP 4</button></li>
-        <li><button id="05" class="btn">MAP 5</button></li>
+        <li><button id="01" class="btn">Aitoff</button></li>
+        <li><button id="02" class="btn">Berghaus Star</button></li>
+        <li><button id="03" class="btn">Equal Earth</button></li>
+        <li><button id="04" class="btn">Hammer</button></li>
+        <li><button id="05" class="btn">Mercator</button></li>
     </ul>
     <ul>
-        <li><button id="06" class="btn">MAP 6</button></li>
-        <li><button id="07" class="btn">MAP 7</button></li>
-        <li><button id="08" class="btn">MAP 8</button></li>
-        <li><button id="09" class="btn">MAP 9</button></li>
-        <li><button id="10" class="btn">MAP 10</button></li>
+        <li><button id="06" class="btn">Mollweide</button></li>
+        <li><button id="07" class="btn">Robinson</button></li>
+        <li><button id="08" class="btn">Van der Grinten</button></li>
+        <li><button id="09" class="btn">Wagner IV</button></li>
+        <li><button id="10" class="btn">Winkel Tripel</button></li>
     </ul>
 </nav>
 <main>
@@ -90,10 +90,18 @@
         <h2>Lear more about World Maps ...</h2>
         <div>
             <article id="MapInfo" class="block">
-
+                <h3 id="mapTitle"></h3>
+                <p id="mapCreationDate"></p>
+                <p id="mapCreator"></p>
+                <d>
+                    <p id="mapDescription"></p>
+                    <p id="mapDistortion"></p>
+                    <p id="mapGraticule"></p>
+                    <p id="mapUsage"></p>
+                </d>
             </article>
             <article id="MapImage" class="block">
-                <!--<img src="../map_images/Aitoff.png" alt="world map icon">-->
+                <img id="mapImg" alt="different world maps ">
             </article>
         </div>
     </section>

@@ -276,45 +276,28 @@ btn.forEach(b => {
         .then(r => r.json())
         .then(text => {
 
-            console.log(text);
+            console.log(text.title);
 
-            const MapInfo = document.getElementById('MapInfo');
-
-            //MapInfo.replaceChildren()
-
-            const title = document.createElement('h3');
-            const creationDate = document.createElement('p');
-            const creator = document.createElement('p');
+            const title = document.getElementById('mapTitle');
+            const creationDate = document.getElementById('mapCreationDate');
+            const creator = document.getElementById('mapCreator');
 
             title.textContent = text.title;
             creationDate.textContent = text.creationDate;
             creator.textContent = text.creator;
 
-            const Text = document.createElement('div');
-
-            const description = document.createElement('p');
-            const distortion = document.createElement('p');
-            const graticule = document.createElement('p');
-            const usage = document.createElement('p')
+            const description = document.getElementById('mapDescription');
+            const distortion = document.getElementById('mapDistortion');
+            const graticule = document.getElementById('mapGraticule');
+            const usage = document.getElementById('mapUsage');
 
             description.textContent = text.description;
             distortion.textContent = text.distortion;
             graticule.textContent = text.graticule;
             usage.textContent = text.usage;
 
-            Text.append(description, distortion, graticule, usage);
-            MapInfo.append(title, creationDate, creator, Text)
-
-
-            const MapImage = document.getElementById('MapImage');
-
-            const Image = document.createElement('img');
+            const Image = document.getElementById('mapImg');
                 Image.src = text.pathToImage;
-
-            MapImage.append(Image);
-
-
-
 
 
         })

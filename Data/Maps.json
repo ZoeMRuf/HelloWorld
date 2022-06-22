@@ -125,7 +125,6 @@
     "usage": "The Winkel Tripel projection is appropriate for general world maps. A variant with a standard parallel at 50°28' has been used by the National Geographic Society since 1998."
   },
   "pathToImage": "../map_images/Winkel_tripel.png",
-  "title": "Winkel Tripel Projection",
-
+  "title": "Winkel Tripel Projection"
 }
 }
