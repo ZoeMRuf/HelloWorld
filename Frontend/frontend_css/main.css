@@ -257,6 +257,15 @@ main #Countries div{
     background-color: #262626;
 }
 
+#MapInfo h3{
+    font-family: "Zen Loop",cursive;
+    color: white;
+}
+
+#MapInfo p {
+    color: white;
+}
+
 h2 {
     font-family: "Amatic SC", cursive;
     font-size: 70px;
