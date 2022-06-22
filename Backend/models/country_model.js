@@ -1,6 +1,7 @@
+//import node fetch to be able to fetch
 const fetch = require('node-fetch');
 
-
+//object for a country with its information
 class FilledCountry{
     constructor(name, population, area, continent, id) {
         this.name = name;
@@ -11,17 +12,20 @@ class FilledCountry{
     }
 }
 
+//our actual filledCountry objects are handled
 class CountryModel{
     API_KEY = "pk.ae0c36b29506bf9752333e29553716bc";
     countryCode;
     constructor() {
+        //two country object with id 0(left) and id 1(right)
         this.countryInfo1 = new FilledCountry("none", 0, 0, "none", 0);
         this.countryInfo2 = new FilledCountry("none", 0, 0, "none", 1);
-
+        //put inside an array
         this.countryInfos = [this.countryInfo1, this.countryInfo2];
 
     }
 
+    //first it takes in latetude and longitude to get the country code and in the second api the country code is used to get the country information and saved into the object
     createCountry(country, body) {
 
         let lat = body.countryLat;
@@ -66,10 +70,12 @@ class CountryModel{
         return "It worked";
     }
 
+    //returns country information
     getCountryInformation(id){
         return this.countryInfos[id]
     }
 
+    //deletes country information
     deleteCountry(id){
         this.countryInfos[id].name = "none";
         this.countryInfos[id].population = 0;
@@ -79,6 +85,8 @@ class CountryModel{
         return "Deleted";
     }
 
+
+    //replaces country information
     updateCountry(country){
         try{
             fetch(`https://restcountries.com/v3.1/name/${country}?fullText=true`)
@@ -95,10 +103,12 @@ class CountryModel{
         }
     }
 
+    //checks if country of given ID is files
     checkCountry(){
         return !this.countryInfos.name.localeCompare("none");
     }
 }
 
+//exports the methods
 const model = new CountryModel();
 module.exports = model;

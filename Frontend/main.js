@@ -1,14 +1,20 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVsLW8iLCJhIjoiY2w0bGgwNTd1MG0xZDNpcXA2Zjlva3MwNCJ9._1wzMXGbaJsD2BM5ZPd2zA';
+
+//checks if information is inside country boxes below the map
 let country1 = false;
 let country2 = false;
+//counts how many times a country is added to the country box to assign correct ID's
 let clickCounter = 1;
+//ID values that will be given
 let customID;
 
+//border of the map, so that the world is only shown once
 let bounds = [
     [-170, -80], // Southwest coordinates
     [190, 85] // Northeast coordinates
 ];
 
+//map initialized
 const map = new mapboxgl.Map({container: 'map', // container ID
     style: 'mapbox://styles/mapbox/light-v10', // style
     center: [16.3, 48.2], // starting position [lng, lat]
@@ -17,7 +23,7 @@ const map = new mapboxgl.Map({container: 'map', // container ID
     maxBounds: bounds
     });
 
-
+//on load the information about the borders are added
 map.on('load', () => {
     map.addSource('country-boundaries', {
         'type': 'geojson',
@@ -25,7 +31,7 @@ map.on('load', () => {
         'data': 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson'
     });
 
-    //countrie colored
+    //countrie colored layer
     map.addLayer({
         'id': 'country-fills',
         'type': 'fill',
@@ -39,7 +45,7 @@ map.on('load', () => {
         'country-label'
     );
 
-    //borders colored
+    //borders colored layer
     map.addLayer({
         'id': 'country-borders',
         'type': 'line',
@@ -68,7 +74,7 @@ map.on('load', () => {
         'country-label'
     );
 
-
+    //when mouse moves over country is coloured
     map.on('mousemove', function(e) {
         let features = map.queryRenderedFeatures(e.point, { layers: ["country-fills"] });
 
@@ -81,18 +87,19 @@ map.on('load', () => {
         }
     });
 
+
+    //when mouse is outside of the map the country changes colour to the basic layer colour
     map.on("mouseout", function() {
         map.getCanvas().style.cursor = 'auto';
         map.setFilter("country-fill-hovered", ["==", "name", ""]);
     });
 
+    //on click setCountryName methode is call which takes in the coordinates of the mouseclick and saves the data of the countries into the backend
     map.on("click", function(e) {
         let features = map.queryRenderedFeatures(e.point, { layers: ["country-fills"] });
         if (features.length) {
             console.log(features[0].properties.name + "\nlng: " + e.lngLat.lng + "\nlat: " + e.lngLat.lat);
             setCountryName(features[0].properties.name, e.lngLat.lng, e.lngLat.lat);
-
-
         }
     });
 });
@@ -100,6 +107,7 @@ map.on('load', () => {
 let Data = {
 }
 
+//writes the name of the country clicked into the country boxes and calls displayCountryInfo(takes in coordinates and country name)
 function setCountryName(name, lng, lat){
     if(!country1 && country2 || country1 && !country2){
         document.getElementById("Countries").scrollIntoView();
@@ -138,6 +146,8 @@ function setCountryName(name, lng, lat){
     }
 }
 
+//if country is successfully added to the country box the clickCounter is incremented and if it is divisible by two the country gets the id 0 and if not the id 1
+//also sends a post request to load the country information into the backend
 function displayCountryInfo(countryName, lng, lat) {
     clickCounter++;
     if(clickCounter % 2 === 0){
@@ -169,7 +179,7 @@ function displayCountryInfo(countryName, lng, lat) {
 
 }
 
-
+//gets the country information and loads it into the country boxes
 function loadCountry(){
     try{
         fetch("http://localhost:3000/map/0")
@@ -204,6 +214,7 @@ function loadCountry(){
     }
 }
 
+//compare button loads information to the country boxes
 const confirmButton = document.getElementById("compare");
 confirmButton.addEventListener("click", function(){
     setTimeout(function(){
@@ -211,6 +222,7 @@ confirmButton.addEventListener("click", function(){
     }, 500);
 })
 
+//clears information of country box 1
 const clearButton1 = document.getElementById("clear1");
 clearButton1.addEventListener("click", function(){
     let country1Name = document.getElementById("country1Name");
@@ -248,7 +260,7 @@ clearButton1.addEventListener("click", function(){
 })
 
 
-
+//clears information of country box 1
 const clearButton2 = document.getElementById("clear2");
 clearButton2.addEventListener("click", function(){
     let country2Name = document.getElementById("country2Name");
@@ -288,7 +300,7 @@ clearButton2.addEventListener("click", function(){
 
 const btn = document.querySelectorAll(".btn");
 
-
+//Map buttons
 btn.forEach(b => {
     b.addEventListener('click', (event) => {
         document.getElementById('WorldMap').scrollIntoView();
@@ -338,7 +350,7 @@ btn.forEach(b => {
 
     })
 })
-
+//post request to load first map informations
 document.addEventListener("DOMContentLoaded", function (event){
 
     try{
