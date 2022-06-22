@@ -1,7 +1,8 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVsLW8iLCJhIjoiY2w0bGgwNTd1MG0xZDNpcXA2Zjlva3MwNCJ9._1wzMXGbaJsD2BM5ZPd2zA';
 let country1 = false;
 let country2 = false;
-
+let clickCounter = 1;
+let customID;
 
 let bounds = [
     [-170, -80], // Southwest coordinates
@@ -91,6 +92,7 @@ map.on('load', () => {
             console.log(features[0].properties.name + "\nlng: " + e.lngLat.lng + "\nlat: " + e.lngLat.lat);
             setCountryName(features[0].properties.name, e.lngLat.lng, e.lngLat.lat);
 
+
         }
     });
 });
@@ -99,6 +101,7 @@ let Data = {
 }
 
 function setCountryName(name, lng, lat){
+
     if(!country1 && !country2 || !country1 && country2){
         let country1Name = document.getElementById("country1Name");
         country1Name.textContent = name
@@ -133,11 +136,18 @@ function setCountryName(name, lng, lat){
 }
 
 function displayCountryInfo(countryName, lng, lat) {
+    clickCounter++;
+    if(clickCounter % 2 === 0){
+        customID = 0;
+    }else{
+        customID = 1;
+    }
     fetch(`http://localhost:3000/map/${countryName}`, {
         method: 'POST',
         body: JSON.stringify({
             'countryLng': `${lng}`,
-            'countryLat': `${lat}`
+            'countryLat': `${lat}`,
+            'id': customID
         }),
         headers: {
             Accept: 'application.json',
@@ -182,7 +192,7 @@ const confirmButton = document.getElementById("compare");
 confirmButton.addEventListener("click", function(){
     setTimeout(function(){
         loadCountry();
-    }, 100);
+    }, 500);
 })
 
 const clearButton1 = document.getElementById("clear1");

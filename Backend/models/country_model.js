@@ -12,7 +12,6 @@ class FilledCountry{
 }
 
 class CountryModel{
-    state = true;
     API_KEY = "pk.ae0c36b29506bf9752333e29553716bc";
     countryCode;
     constructor() {
@@ -27,13 +26,7 @@ class CountryModel{
 
         let lat = body.countryLat;
         let lon = body.countryLng;
-        let localState;
-        if(this.countryInfos[0].name.localeCompare("none") !== 0&& this.countryInfos[1].name.localeCompare("none") === 0){
-            localState = 1;
-        }else{
-            localState = 0;
-        }
-
+        let localState = body.id;
 
         fetch(`https://us1.locationiq.com/v1/reverse?key=${this.API_KEY}&lat=${lat}&lon=${lon}&format=json`)
             .then(res => res.json())
@@ -50,7 +43,6 @@ class CountryModel{
                         this.countryInfos[localState].area = output[0].area;
                         this.countryInfos[localState].continent = output[0].continents[0];
                         this.countryInfos[localState].id = localState;
-                        this.state = !this.state;
                     })
             })
         return "It worked";
@@ -65,6 +57,7 @@ class CountryModel{
         this.countryInfos[id].population = 0;
         this.countryInfos[id].area = 0;
         this.countryInfos[id].continent = "none";
+
         return "Deleted";
     }
 
