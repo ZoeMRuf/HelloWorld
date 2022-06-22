@@ -84,7 +84,7 @@ nav ul {
 }
 
 nav li {
-    width: 200px;
+    height: 80px;
     padding: 15px;
     text-align: center;
     list-style: none;
