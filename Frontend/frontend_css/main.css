@@ -97,7 +97,7 @@ nav ul li:hover {
 .btn {
     color: floralwhite;
     background-color: #262626;
-    border: 3px solid #89043d;
+    border: 3px dotted #89043d;
     border-radius: 10px;
     font-family: "Amatic SC", cursive;
     font-size: 40px;
@@ -108,7 +108,7 @@ nav ul li:hover {
 .btn:hover {
     color: floralwhite;
     //background-color: #89043d;
-    border: 3px solid #89043d;
+    border: 3px dotted #89043d;
     font-family: "Amatic SC", cursive;
     font-size: 40px;
     width: 100%;

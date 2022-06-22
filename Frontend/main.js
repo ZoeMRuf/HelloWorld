@@ -87,13 +87,16 @@ map.on('load', () => {
 
 const btn = document.querySelectorAll(".btn");
 
-btn.forEach(button => {
+btn.forEach(b => {
 
-    button.addEventListener('click', (event) => {
+    b.addEventListener('click', (event) => {
+        document.getElementById('WorldMap').scrollIntoView();
+        const id = b.id
+        console.log(id)
 
-        console.log(event);
 
     })
+
 
 })
 
