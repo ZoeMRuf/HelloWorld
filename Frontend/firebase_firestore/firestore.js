@@ -85,6 +85,4 @@ class DatabaseAccess{
     }
 }
 
-
-
 DatabaseAccess.addMap("Aitoff Projection","David A. Aitoff","1889", "../map_images/Aitoff.png","The Aitoff projection is a modified azimuthal projection. It is a compromise projection whose graticule takes the form of an ellipse. This projection is appropriate for small-scale mapping of the world. It was developed by Russian cartographer David A. Aitoff in 1889.", "The meridians are equally spaced and concave toward the central meridian. The central meridian is a straight line and half the length of the equator. The parallels are equally spaced curves, concave toward the poles. The projection outline forms a shape of an ellipse. The poles are presented as points, and they are co-vertices of the ellipse (located on the minor axis). The graticule is symmetric across the equator and the central meridian.", "The Aitoff projection is neither conformal nor equal-area. That means that shapes, areas, distances, directions, and angles are all somewhat distorted. Scale is correct along the equator and the central meridian. Distortion values are symmetric across the equator and the central meridian.", "The projection is appropriate for small-scale mapping not requiring accurate area measurements.")
