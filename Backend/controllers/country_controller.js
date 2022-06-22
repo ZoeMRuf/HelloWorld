@@ -8,13 +8,20 @@ class CountryController{
     }
     createCountry = (req, res) => {
 
+        if (this.checkCountry()) {
+            res.send(model.createCountry(req.params.country, req.params.id, req.body));
+        }
+
+        /*
         try {
             if (this.checkCountry()) {
-                res.send(model.createCountry(req.params.country, req.params.id));
+                res.send(model.createCountry(req.params.country, req.params.id, req.body));
             }
         } catch (e) {
             res.status(404).send("There is already a country");
         }
+
+         */
     }
 
     getCountry(req, res){

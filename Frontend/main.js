@@ -1,7 +1,11 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVsLW8iLCJhIjoiY2w0bGgwNTd1MG0xZDNpcXA2Zjlva3MwNCJ9._1wzMXGbaJsD2BM5ZPd2zA';
 let state = false;
 let country1 = false;
+let country1lng = 0
+let country1lat = 0
 let country2 = false;
+let country2lng = 0
+let country2lat = 0
 
 const map = new mapboxgl.Map({container: 'map', // container ID
     style: 'mapbox://styles/mapbox/light-v10', // style
@@ -82,8 +86,8 @@ map.on('load', () => {
     map.on("click", function(e) {
         let features = map.queryRenderedFeatures(e.point, { layers: ["country-fills"] });
         if (features.length) {
-            console.log(e, features[0].properties.name);
-            setCountryName(features[0].properties.name);
+            console.log(features[0].properties.name + "\nlng: " + e.lngLat.lng + "\nlat: " + e.lngLat.lat);
+            setCountryName(features[0].properties.name, e.lngLat.lng, e.lngLat.lat);
 
         }
     });
@@ -92,11 +96,11 @@ map.on('load', () => {
 let Data = {
 }
 
-function setCountryName(name){
-    if(!country1 && !country2){
+function setCountryName(name, lng, lat){
+    if(!country1 && !country2 || !country1 && country2){
         let country1Name = document.getElementById("country1Name");
         country1Name.textContent = name
-        displayCountryInfo(name);
+        displayCountryInfo(name, lng, lat);
 
         let country1Population = document.getElementById("country1Population");
         let country1Area = document.getElementById("country1Area");
@@ -110,7 +114,7 @@ function setCountryName(name){
     }else if(country1 && !country2){
         let country2Name = document.getElementById("country2Name");
         country2Name.textContent = name;
-        displayCountryInfo(name);
+        displayCountryInfo(name, lng, lat);
 
         let country2Population = document.getElementById("country2Population");
         let country2Area = document.getElementById("country2Area");
@@ -121,20 +125,6 @@ function setCountryName(name){
         country2Continent.textContent = "--";
 
         country2 = true;
-    }else if(!country1 && country2){
-        let country1Name = document.getElementById("country1Name");
-        country1Name.textContent = name
-        displayCountryInfo(name);
-
-        let country1Population = document.getElementById("country1Population");
-        let country1Area = document.getElementById("country1Area");
-        let country1Continent = document.getElementById("country1Continent");
-
-        country1Population.textContent = "--";
-        country1Area.textContent = "--";
-        country1Continent.textContent = "--";
-
-        country1 = true;
     }else{
         console.log("full");
     }
@@ -172,11 +162,14 @@ function setCountryName(name){
      */
 }
 
-function displayCountryInfo(countryName) {
+function displayCountryInfo(countryName, lng, lat) {
     if(!country1){
         fetch(`http://localhost:3000/map/${countryName}/0`, {
             method: 'POST',
-            body: JSON.stringify(Data),
+            body: JSON.stringify({
+                'countryLng': `${lng}`,
+                'countryLat': `${lat}`
+            }),
             headers: {
                 Accept: 'application.json',
                 'Content-Type': 'application/json'
@@ -190,7 +183,10 @@ function displayCountryInfo(countryName) {
     }else{
         fetch(`http://localhost:3000/map/${countryName}/1`, {
             method: 'POST',
-            body: JSON.stringify(Data),
+            body: JSON.stringify({
+                'countryLng': `${lng}`,
+                'countryLat': `${lat}`
+            }),
             headers: {
                 Accept: 'application.json',
                 'Content-Type': 'application/json'
