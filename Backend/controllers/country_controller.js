@@ -1,4 +1,5 @@
 const model = require("../models/country_model");
+const mapData = require("../models/mapData_model");
 
 class CountryController{
     static MANDATORY = ["name", "population", "surface_area", "region"];
@@ -23,6 +24,7 @@ class CountryController{
         res.send(model.getCountryInformation(req.params.id));
     }
 
+
     deleteCountry(req, res){
         res.send(model.deleteCountry(req.params.id));
     }
@@ -32,15 +34,15 @@ class CountryController{
     }
 
     getMapData(req, res){
-        res.send(model.getMapData());
+        res.send(mapData.getMapData());
     }
 
     addMapData(req, res){
-        res.send(model.addMapData(req.params.id));
+        res.send(mapData.addMapData(req.params.id));
     }
 
     updateMapData(req, res){
-        res.send(model.updateMapData(req.params.id));
+        res.send(mapData.updateMapData(req.params.id));
     }
 }
 
