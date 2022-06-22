@@ -101,6 +101,9 @@ let Data = {
 }
 
 function setCountryName(name, lng, lat){
+    if(!country1 && country2 || country1 && !country2){
+        document.getElementById("Countries").scrollIntoView();
+    }
 
     if(!country1 && !country2 || !country1 && country2){
         let country1Name = document.getElementById("country1Name");
@@ -208,6 +211,9 @@ clearButton1.addEventListener("click", function(){
     country1Continent.textContent = "--";
 
     country1 = false;
+    if(!country1 && !country2){
+        document.getElementById("map").scrollIntoView();
+    }
 
     fetch(`http://localhost:3000/map/0`, {
         method: 'DELETE',
@@ -239,6 +245,10 @@ clearButton2.addEventListener("click", function(){
     country2Continent.textContent = "--";
 
     country2 = false;
+
+    if(!country1 && !country2){
+        document.getElementById("map").scrollIntoView();
+    }
 
     fetch(`http://localhost:3000/map/1`, {
         method: 'DELETE',
