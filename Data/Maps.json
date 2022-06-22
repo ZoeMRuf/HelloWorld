@@ -6,13 +6,128 @@
     "description": "The Aitoff projection is a modified azimuthal projection. It is a compromise projection whose graticule takes the form of an ellipse. This projection is appropriate for small-scale mapping of the world. It was developed by Russian cartographer David A. Aitoff in 1889.",
     "distortion": "The Aitoff projection is neither conformal nor equal-area. That means that shapes, areas, distances, directions, and angles are all somewhat distorted. Scale is correct along the equator and the central meridian. Distortion values are symmetric across the equator and the central meridian.",
     "graticule": "The meridians are equally spaced and concave toward the central meridian. The central meridian is a straight line and half the length of the equator. The parallels are equally spaced curves, concave toward the poles. The projection outline forms a shape of an ellipse. The poles are presented as points, and they are co-vertices of the ellipse (located on the minor axis). The graticule is symmetric across the equator and the central meridian.",
-    "limitations": "The Aitoff projection is supported on spheres only. For an ellipsoid, the semimajor axis is used for the radius.",
     "usage": "The projection is appropriate for small-scale mapping not requiring accurate area measurements."
   },
   "pathToImage": "../images/map_images/Aitoff.png",
   "title": "Aitoff Projection"
 },
 
-"02": {},
-"03": {}}
+
+"02": {
+  "creationDate":"1880",
+  "creator":"Hermann Berghaus",
+  "infoText": {
+    "description": "The Berghaus star projection uses the azimuthal equidistant projection for the central hemisphere. The other half of the world is split into five triangular pieces, forming a star around the circular center. Usually centered at the North Pole, it can minimize breaks in land masses. The American Association of Geographers (AAG) incorporated a version of the Berghaus star projection into its logo in 1911. The projection was developed by Hermann Berghaus in 1879. Equations for an ellipsoid of revolution were developed at Esri.",
+    "distortion": "Projection is neither conformal nor equal-area. Shapes, areas, and angles are all generally distorted. The projection preserves both distance and direction from the central point though a hemisphere. Scale is true only along straight lines radiating from the center of the map for a hemisphere and along the lines between the center and the tips of triangular pieces. In polar aspect, this is along the central meridians of triangular pieces. Distortion values are radially symmetric across the center of the map.",
+    "graticule": "The straightness of the latitude and longitude lines depends on the projection's center. If the center is at the North or South Pole, meridians are straight but broken at the equator, while parallels are presented as circular arcs. If the latitude of origin is at the Equator, the equator and the central meridian are straight lines. If the latitude of origin is elsewhere, only the central meridian is shown as a straight line. For all cases except a polar case, latitude lines are complex curves. Both poles project as points regardless of the map center. The graticule is radially symmetric about the center in polar aspect.",
+    "usage": "The Berghaus star projection was used for world maps in several atlases in the nineteenth century. The American Association of Geographers uses a version of the Berghaus star projection in its logo."
+  },
+  "pathToImage": "../map_images/Berghaus's_star.png",
+  "title": "Berghaus Star Projection"
+},
+
+  "03": {
+    "creationDate":"2018",
+    "creator":"Tom Patterson, Bernhard Jenny and Bojan Šavrič",
+    "infoText": {
+      "description": "Equal Earth is an equal-area pseudocylindrical projection for world maps. Its land features have a pleasing appearance, and its shape is similar to the Robinson projection. The projection was jointly developed by Tom Patterson, Bernhard Jenny, and Bojan Šavrič in 2018, and it was quickly adopted by the NASA Goddard Institute for Space Studies (GISS).",
+      "distortion": "Equal Earth is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are distorted and stretched north-south in tropical and mid-latitude areas. Nearer the poles, features are compressed in the north-south direction. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Equal Earth is a pseudocylindric projection. All parallels, the central meridian, and both poles are presented as straight lines. The parallels are unequally spaced. The meridians are equally spaced and other than the central meridian are curved outward. The poles are 0.59247 times the length of the equator. The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas."
+    },
+    "pathToImage": "../map_images/equal_earth.png",
+    "title": "Equal Earth Projection"
+  },
+
+  "03": {
+    "creationDate":"2018",
+    "creator":"Tom Patterson, Bernhard Jenny and Bojan Šavrič",
+    "infoText": {
+      "description": "Equal Earth is an equal-area pseudocylindrical projection for world maps. Its land features have a pleasing appearance, and its shape is similar to the Robinson projection. The projection was jointly developed by Tom Patterson, Bernhard Jenny, and Bojan Šavrič in 2018, and it was quickly adopted by the NASA Goddard Institute for Space Studies (GISS).",
+      "distortion": "Equal Earth is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are distorted and stretched north-south in tropical and mid-latitude areas. Nearer the poles, features are compressed in the north-south direction. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Equal Earth is a pseudocylindric projection. All parallels, the central meridian, and both poles are presented as straight lines. The parallels are unequally spaced. The meridians are equally spaced and other than the central meridian are curved outward. The poles are 0.59247 times the length of the equator. The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas."
+    },
+    "pathToImage": "../map_images/equal_earth.png",
+    "title": "Equal Earth Projection"
+  },
+
+  "04": {
+    "creationDate":"1892 ",
+    "creator":"Ernst von Hammer ",
+    "infoText": {
+      "description": "The Hammer projection is a modification of the Lambert azimuthal equal-area projection. It is an equal-area projection and its graticule takes a form of an ellipse. The projection is also known as the Hammer-Aitoff projection. The Hammer projection is appropriate for small-scale mapping. The Hammer projection was developed by Ernst von Hammer in 1892 after being inspired by the Russian cartographer, David A. Aitoff. Equations for an ellipsoid were developed at Esri.",
+      "distortion": "Hammer is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are generally distorted. Land features near the projection's outline are skewed. Scale decreases along the equator and central meridian as distance from the origin increases. Areas near the poles are less sheared than on some pseudocylindrical projections. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Hammer is a modified azimuthal projection. The central meridian is a straight line, half the length of the projected equator. The other meridians are complex curves, concave toward the central meridian and unequally spaced along the equator. The equator is a straight line. All other parallels are complex curves, concave toward the nearest pole and unequally spaced along the central meridian. The projection outline forms a shape of an ellipse. Poles are presented as points and they are co-vertices of the ellipse (on the minor axis). The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The Hammer projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas. The Hammer ellipsoidal variant is recommended for world maps centered on other latitudes besides the equator. An example of such an oblique aspect is the Briesemeister projection."
+    },
+    "pathToImage": "../map_images/Hammer.png",
+    "title": "Hammer Projection"
+  },
+
+  "05": {
+    "creationDate":"1569",
+    "creator":"Gerhard Mercator",
+    "infoText": {
+      "description": "Mercator is a conformal cylindrical map projection that was originally created to display accurate compass bearings for sea travel. An additional feature of this projection is that all local shapes are accurate and correctly defined at infinitesimal scale. It was presented by Gerardus Mercator in 1569. The Web Mercator variant of the projection is the de facto standard for web maps and online services.",
+      "distortion": "Mercator is a conformal map projection. Directions, angles, and shapes are maintained at infinitesimal scale. Any straight line drawn on this projection represents an actual compass bearing. These true direction lines are rhumb lines and generally do not describe the shortest distance between points. Distances are true along the equator or along the secant latitudes (standard parallels). Area is increasingly distorted toward the polar regions. For example, although Greenland is only one-eighth the size of South America, Greenland appears to be larger than Souh America in the Mercator projection. Distortion values are the same along a particular parallel and they are symmetric across the equator and the central meridian.",
+      "graticule": "Mercator is a cylindrical projection. The meridians are vertical lines, parallel to each other, and equally spaced, and they extend to infinity when approaching the poles. The lines of latitude are horizontal straight lines, perpendicular to the meridians and the same length as the equator, but they become farther apart toward the poles. The poles project to infinity and cannot be shown on the map. The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The projection is appropriate for large-scale mapping of the areas near the equator such as Indonesia and parts of the Pacific Ocean. Due to its property of straight rhumb lines, it is recommended for standard sea navigation charts. Its variant, the Web Mercator projection, is standard for web maps and online services. The projection is often misused for world maps, wall charts, and thematic mapping on web maps."
+    },
+    "pathToImage": "../map_images/Mercator.png",
+    "title": "Mercator Projection"
+  },
+
+  "06": {
+    "creationDate":"1805",
+    "creator":"Karl B. Mollweide",
+    "infoText": {
+      "description": "The Mollweide projection is an equal-area pseudocylindrical map projection displaying the world in a form of an ellipse with axes in a 2:1 ratio. It is also known as Babinet, elliptical, homolographic, or homalographic projection. The projection is appropriate for thematic and other world maps requiring accurate areas. Mollweide was first introduced by Karl B. Mollweide in 1805.",
+      "distortion": "Mollweide is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are generally distorted. Points 40°44' north and south at the central meridian have zero distortion. The scale is correct along the 40°44' north and south parallels and constant along any given parallel. Bulging outer meridians produce considerable distortion toward the edge of the projection, especially at high latitudes. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Mollweide is a pseudocylindric projection. The equator and the central meridian are projected as two perpendicular straight lines. The central meridian is half the length of the projected equator. Two meridians, 90° east and 90° west of the central meridian, project as a circle. The other meridians are regularly distributed semi-ellipses concave toward the central meridian. All parallels are unequally distributed straight lines perpendicular to the central meridian. Their spacing decreases away from equator. The projection outline forms a shape of an ellipse. The poles are presented as points and they are covertices of the ellipse (on the minor axis). The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The Mollweide projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas."
+    },
+    "pathToImage": "../map_images/Mollweide.png",
+    "title": "Mollweide Projection"
+  },
+
+  "07": {
+    "creationDate":"1963",
+    "creator":"Arthur H. Robinson",
+    "infoText": {
+      "description": "The Robinson projection is perhaps the most commonly used compromise pseudocylindrical map projection for world maps. National Geographic used the Robinson projection for their world maps for about a decade until 1998. The projection was designed by Arthur H. Robinson in 1963 at the request of the Rand McNally Company using graphic design rather than mathematical equation development. It was briefly called the orthophanic (right appearing) projection after its introduction.",
+      "distortion": "The Robinson projection is neither conformal nor equal-area. It generally distorts shapes, areas, distances, directions, and angles. The distortion patterns are similar to common compromise pseudocylindrical projections. Area distortion grows with latitude and does not change with longitude. High latitude areas are exaggerated. Angular distortion is moderate near the center of the map and increases toward the edges. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Robinson is a pseudocylindric projection. The meridians are regularly distributed curves mimicking elliptical arcs. They are concave toward the central meridian and do not intersect the parallels at right angles. The parallels are unequally distributed straight lines. The equator, both poles, and the central meridian are projected as straight lines. The central meridian is 0.5072 times the length of the projected equator and pole lines are 0.5322 as long as equator. The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The Robinson projection is primarily appropriate for general world maps. National Geographic used it for their world maps for about a decade until 1998."
+    },
+    "pathToImage": "../map_images/Robinson.png",
+    "title": "Robinson Projection"
+  },
+
+  "08": {
+    "creationDate":"1898",
+    "creator":"Alphons J. van der Grinten",
+    "infoText": {
+      "description": "The Van der Grinten I projection is a polyconic projection of the world in a circle. In this projection, the continents look similar to how they appear on the Mercator projection, except that the Van der Grinten I portrays the world with a curved graticule. Both the meridians and parallels are projected as circular arcs. National Geographic used the projection for their world maps between 1922 and 1988. The projection was invented by Alphons J. van der Grinten in 1898.",
+      "distortion": "The Van der Grinten I projection is neither conformal nor equal-area. Shapes, areas, distances, directions, and angles are all generally distorted. The scale is true along the equator and increases rapidly with the distance from the equator. The polar regions are greatly distorted and exaggerated. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Van der Grinten I is a polyconic projection. The equator and the central meridian are projected as straight lines of equal length. The other meridians are equally spaced circular arcs concave toward the central meridian. All parallels, except the equator, are also projected as circular arcs, but concave toward the nearest pole. They are unequally spaced and their spacing decreases away from the equator. The projection outline forms a circle. The poles are presented as points on the outline. The graticule is symmetric across the equator and the central meridian.",
+      "usage": "Due to its circular look, the Van der Grinten I projection is very appealing for global maps. The projection could be used for general world maps not requiring accurate areas, although its use is not recommended due to extreme distortion in polar regions. National Geographic used the projection for their world maps between 1922 and 1988."
+    },
+    "pathToImage": "../map_images/Van_der_Grinten.png",
+    "title": "Van der Grinten Projection"
+  },
+
+  "09": {
+    "creationDate":"1932",
+    "creator":"Karl Heinrich (Karlheinz) Wagner",
+    "infoText": {
+      "description": "The Wagner IV is an equal-area pseudocylindrical projection for world maps. Its meridians follow a portion of ellipses compared to the Eckert IV projection whose meridians are semiellipses. The Wagner IV projection was introduced by Karl Heinrich (Karlheinz) Wagner in 1932. It was independently developed by Reinholds V. Putniņš in 1934, therefore it is also known as Putniņš P'2 projection.",
+      "distortion": "Wagner IV is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are distorted and stretched north-south in tropical and mid-latitude areas. Nearer the poles, features are compressed in the north-south direction. Points 42°59' north and south of the central meridian have zero distortion. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Wagner IV is a pseudocylindric projection. The meridians, except the central meridian, are following portions of ellipses, and they bulge away from the central meridian. The meridians at 103°55' away from the central line are circular arcs. The central meridian is a straight line, half the length of the projected equator. All parallels are straight lines, perpendicular to the central meridians, and unequally spaced. Both poles are displayed as straight lines, half the length of projected equator. The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas."
+    },
+    "pathToImage": "../map_images/Wagner_IV.png",
+    "title": "Wagner IV Projection"
+  },
+"10": {}}
 
