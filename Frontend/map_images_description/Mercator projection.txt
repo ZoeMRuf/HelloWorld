@@ -1,7 +1,0 @@
-name: Mercator projection
-
-creation date: 1569
-
-creator: Gerhard Mercator 
-
-info: good for navigation charts

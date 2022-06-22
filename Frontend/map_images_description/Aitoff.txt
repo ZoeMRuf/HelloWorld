@@ -1,7 +1,0 @@
-name: Aitoff projection
-
-creation date: 1889
-
-creator: David A. Aitoff
-
-info: good for small-scale mapping
