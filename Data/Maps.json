@@ -131,7 +131,7 @@
 
   "11": {
     "creationDate":"16th century",
-    "creator":"???",
+    "creator":"Unknown",
     "infoText": {
       "description": " The sinusoidal projection is a pseudocylindrical equal-area projection displaying all parallels and the central meridian at true scale. The boundary meridians bulge outward excessively producing considerable shape distortion near the map outline. Alternative formats reduce the distortion along outer meridians by interrupting the continuity of the projection over the oceans and by centering the continents around their own central meridians, or vice versa. The sinusoidal projection is also known as the Sanson-Flamsteed and Mercator-Sanson projection after the cartographers who used it. The projection was developed in the 16th century.",
       "distortion": "Sinusoidal is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are generally distorted. Scale is true along every parallel and the central meridian. Distortions are moderate near the projection center. Bulging meridians produce considerable distortion toward the edge of the projection. Distortion values are symmetric across the equator and the central meridian.",
@@ -139,7 +139,7 @@
       "usage": "The sinusoidal projection is appropriate for thematic world maps although its use is not recommended. The projection has also been used for maps of continents near the equator, like South America and Africa, centered on their own central meridians."
     },
     "pathToImage": "../map_images/sinusoidal_(interrupted).png",
-    "title": "sinusoidal Projection (interrupted)"
+    "title": "Sinusoidal Projection (interrupted)"
   },
 
 "12": {
