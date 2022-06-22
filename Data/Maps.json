@@ -115,7 +115,34 @@
     "pathToImage": "../map_images/Wagner_IV.png",
     "title": "Wagner IV Projection"
   },
-"10": {
+
+  "10": {
+    "creationDate":"1752",
+    "creator":"Claudius Ptolemy",
+    "infoText": {
+      "description": "Bonne is an equal-area pseudoconic map projection. Its graticule takes a form of a heart, and it was frequently used to map continents. The projection was invented by Claudius Ptolemy about A.D. 100, but it was named after Rigobert Bonne who extensively used the projection in 1752.",
+      "distortion": "Bonne is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are generally distorted. The scale is true along the central meridians and each parallel. There is no distortion along the standard parallel and central meridian, and it grows away from these lines. Distortion values are symmetric across the central meridian.",
+      "graticule": "Bonne is a pseudoconic map projection. The central meridian is projected as a straight line. The other meridians are complex curves, concave toward the central meridian and equally spaced along each parallel. The parallels of latitude are concentric circular arcs equally spaced along the central meridian. They are concave toward the pole closest to the standard parallel. The projection outline forms a shape of a heart. Both poles project as points. The graticule is symmetric across the central meridian.",
+      "usage": "The projection was used during the nineteenth and early twentieth centuries for atlas maps of Asia, Australia, Europe, and North America. Historically, it was also used for large-scale topographic mapping of France and Ireland, along with Morocco and some other Mediterranean countries. These days, the projection is used artistically to show the world in a heart shape."
+    },
+    "pathToImage": "../map_images/bonne.png",
+    "title": "Bonne Projection"
+  },
+
+  "11": {
+    "creationDate":"16th century",
+    "creator":"???",
+    "infoText": {
+      "description": " The sinusoidal projection is a pseudocylindrical equal-area projection displaying all parallels and the central meridian at true scale. The boundary meridians bulge outward excessively producing considerable shape distortion near the map outline. Alternative formats reduce the distortion along outer meridians by interrupting the continuity of the projection over the oceans and by centering the continents around their own central meridians, or vice versa. The sinusoidal projection is also known as the Sanson-Flamsteed and Mercator-Sanson projection after the cartographers who used it. The projection was developed in the 16th century.",
+      "distortion": "Sinusoidal is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are generally distorted. Scale is true along every parallel and the central meridian. Distortions are moderate near the projection center. Bulging meridians produce considerable distortion toward the edge of the projection. Distortion values are symmetric across the equator and the central meridian.",
+      "graticule": "Sinusoidal is a pseudocylindric projection. The equator and the central meridian are projected as straight lines, where the projected equator is two times as long as the central meridian. The other meridians are sinusoidal curves, bulging away from the central meridian and equally spaced. The parallels are equally spaced straight lines perpendicular to the central meridian. The poles are presented as points and they appear as protruding edges. The graticule is symmetric across the equator and the central meridian.",
+      "usage": "The sinusoidal projection is appropriate for thematic world maps although its use is not recommended. The projection has also been used for maps of continents near the equator, like South America and Africa, centered on their own central meridians."
+    },
+    "pathToImage": "../map_images/sinusoidal_(interrupted).png",
+    "title": "sinusoidal Projection (interrupted)"
+  },
+
+"12": {
   "creationDate":"1921",
   "creator":"Oswald Winkel",
   "infoText": {
