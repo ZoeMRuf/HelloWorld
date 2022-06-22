@@ -28,9 +28,20 @@ class CountryController{
     }
 
     updateCountry(req, res){
-        model.updateCountry(req.params.country);
+        res.send(model.updateCountry(req.params.country));
     }
 
+    getMapData(req, res){
+        res.send(model.getMapData());
+    }
+
+    addMapData(req, res){
+        res.send(model.addMapData(req.params.id));
+    }
+
+    updateMapData(req, res){
+        res.send(model.updateMapData(req.params.id));
+    }
 }
 
 module.exports = new CountryController();
