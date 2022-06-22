@@ -182,16 +182,16 @@ main #Countries div{
     width: 100%;
     text-align: center;
     justify-content: center;
-    background-color: #89043d;
+
 }
 .clear {
     display: block;
     margin: 10px auto 10px auto;
     width: 80%;
     height: auto;
-    background-color: #262626;
-    color: white;
-    border: 3px solid #262626;
+    background-color: #c2e812;
+    color: #262626;
+    border: 5px solid #c2e812;
     border-radius: 10px;
     font-size: 20px;
     font-family: "Amatic SC",cursive;
@@ -205,9 +205,9 @@ main #Countries div{
     margin: 10px auto 10px auto;
     width: 80%;
     height: auto;
-    background-color: #c2e812;
+    background-color: white;
     color: #262626;
-    border: 3px solid #c2e812;
+    border: 5px solid white;
     border-radius: 10px;
     font-size: 20px;
     font-family: "Amatic SC",cursive;
