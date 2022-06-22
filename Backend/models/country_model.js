@@ -28,24 +28,44 @@ class CountryModel{
         let lon = body.countryLng;
         let localState = body.id;
 
-        fetch(`https://us1.locationiq.com/v1/reverse?key=${this.API_KEY}&lat=${lat}&lon=${lon}&format=json`)
-            .then(res => res.json())
-            .then((data) => {
-                this.countryCode = data.address.country_code;
-                return this.countryCode;
-            })
-            .then(countryCode => {
-                fetch(`https://restcountries.com/v3.1/alpha/${this.countryCode}`)
-                    .then(r => r.json())
-                    .then((output) => {
-                        this.countryInfos[localState].name = output[0].name.common;
-                        this.countryInfos[localState].population = output[0].population;
-                        this.countryInfos[localState].area = output[0].area;
-                        this.countryInfos[localState].continent = output[0].continents[0];
-                        this.countryInfos[localState].id = localState;
-                    })
-            })
-        return "It worked";
+        try{
+            fetch(`https://us1.locationiq.com/v1/reverse?key=${this.API_KEY}&lat=${lat}&lon=${lon}&format=json`)
+                .then((response) => {
+                    if(response.ok){
+                        return response.json();
+                    }
+                    throw new Error('Something went wrong')
+                })
+                .then((data) => {
+                    this.countryCode = data.address.country_code;
+                    return this.countryCode;
+                })
+                .catch((error) => {
+                    console.log("Something went wrong with the foreign API's")
+                })
+                .then(countryCode => {
+                    fetch(`https://restcountries.com/v3.1/alpha/${this.countryCode}`)
+                        .then((response) => {
+                            if (response.ok) {
+                                return response.json();
+                            }
+                            throw new Error('Something went wrong')
+                        })
+                        .then((output) => {
+                            this.countryInfos[localState].name = output[0].name.common;
+                            this.countryInfos[localState].population = output[0].population;
+                            this.countryInfos[localState].area = output[0].area;
+                            this.countryInfos[localState].continent = output[0].continents[0];
+                            this.countryInfos[localState].id = localState;
+                        })
+                        .catch((error) => {
+                            console.log("Something went wrong with the foreign API's")
+                        });
+                })
+            return "It worked";
+        }catch(e){
+            console.log("Something went wrong")
+        }
     }
 
     getCountryInformation(id){
@@ -70,12 +90,11 @@ class CountryModel{
                     this.countryInfos.population = data[0].population;
                     this.countryInfos.area = data[0].area;
                     this.countryInfos.continent = data[0].continents[0];
+                    return "Replacement successful";
                 })
         }catch (e){
             return "Something went wrong";
         }
-
-        return "Replacement successful";
     }
 
     checkCountry(){

@@ -145,50 +145,63 @@ function displayCountryInfo(countryName, lng, lat) {
     }else{
         customID = 1;
     }
-    fetch(`http://localhost:3000/map/${countryName}`, {
-        method: 'POST',
-        body: JSON.stringify({
-            'countryLng': `${lng}`,
-            'countryLat': `${lat}`,
-            'id': customID
-        }),
-        headers: {
-            Accept: 'application.json',
-            'Content-Type': 'application/json'
-        },
-        Cache: 'default'
-    })
-        .then(r => r.text())
-        .then(text => {
-            console.log(text);
+    try{
+        fetch(`http://localhost:3000/map/${countryName}`, {
+            method: 'POST',
+            body: JSON.stringify({
+                'countryLng': `${lng}`,
+                'countryLat': `${lat}`,
+                'id': customID
+            }),
+            headers: {
+                Accept: 'application.json',
+                'Content-Type': 'application/json'
+            },
+            Cache: 'default'
         })
+            .then(r => r.text())
+            .then(text => {
+                console.log(text);
+            })
+    }catch(e){
+        console.log("Something went wrong");
+    }
+
 }
 
 
 function loadCountry(){
-    fetch("http://localhost:3000/map/0")
-        .then(r => r.json())
-        .then(data => {
-            let country1Population = document.getElementById("country1Population");
-            let country1Area = document.getElementById("country1Area");
-            let country1Continent = document.getElementById("country1Continent");
+    try{
+        fetch("http://localhost:3000/map/0")
+            .then(r => r.json())
+            .then(data => {
+                let country1Population = document.getElementById("country1Population");
+                let country1Area = document.getElementById("country1Area");
+                let country1Continent = document.getElementById("country1Continent");
 
-            country1Population.textContent = "Population: " + data.population.toLocaleString('en-US');
-            country1Area.textContent = "Area: " + data.area.toLocaleString('en-US') + " \u33A2";
-            country1Continent.textContent = "Continent: " + data.continent;
-        })
+                country1Population.textContent = "Population: " + data.population.toLocaleString('en-US');
+                country1Area.textContent = "Area: " + data.area.toLocaleString('en-US') + " \u33A2";
+                country1Continent.textContent = "Continent: " + data.continent;
+            })
+    }catch(e){
+        console.log("Something went wrong");
+    }
 
-    fetch("http://localhost:3000/map/1")
-        .then(r => r.json())
-        .then(data => {
-            let country2Population = document.getElementById("country2Population");
-            let country2Area = document.getElementById("country2Area");
-            let country2Continent = document.getElementById("country2Continent");
+    try{
+        fetch("http://localhost:3000/map/1")
+            .then(r => r.json())
+            .then(data => {
+                let country2Population = document.getElementById("country2Population");
+                let country2Area = document.getElementById("country2Area");
+                let country2Continent = document.getElementById("country2Continent");
 
-            country2Population.textContent = "Population: " + data.population.toLocaleString('en-US');
-            country2Area.textContent = "Area: " + data.area.toLocaleString('en-US') + " \u33A2";
-            country2Continent.textContent = "Continent: " + data.continent;
-        })
+                country2Population.textContent = "Population: " + data.population.toLocaleString('en-US');
+                country2Area.textContent = "Area: " + data.area.toLocaleString('en-US') + " \u33A2";
+                country2Continent.textContent = "Continent: " + data.continent;
+            })
+    }catch(e){
+        console.log("Something went wrong");
+    }
 }
 
 const confirmButton = document.getElementById("compare");
@@ -214,20 +227,24 @@ clearButton1.addEventListener("click", function(){
     if(!country1 && !country2){
         document.getElementById("map").scrollIntoView();
     }
-
-    fetch(`http://localhost:3000/map/0`, {
-        method: 'DELETE',
-        body: JSON.stringify(Data),
-        headers: {
-            Accept: 'application.json',
-            'Content-Type': 'application/json'
-        },
-        Cache: 'default'
-    })
-        .then(r => r.text())
-        .then(text => {
-            console.log(text);
+    try{
+        fetch(`http://localhost:3000/map/0`, {
+            method: 'DELETE',
+            body: JSON.stringify(Data),
+            headers: {
+                Accept: 'application.json',
+                'Content-Type': 'application/json'
+            },
+            Cache: 'default'
         })
+            .then(r => r.text())
+            .then(text => {
+                console.log(text);
+            })
+    }catch(e){
+        console.log("Something went wrong");
+    }
+
 })
 
 
@@ -249,20 +266,24 @@ clearButton2.addEventListener("click", function(){
     if(!country1 && !country2){
         document.getElementById("map").scrollIntoView();
     }
-
-    fetch(`http://localhost:3000/map/1`, {
-        method: 'DELETE',
-        body: JSON.stringify(Data),
-        headers: {
-            Accept: 'application.json',
-            'Content-Type': 'application/json'
-        },
-        Cache: 'default'
-    })
-        .then(r => r.text())
-        .then(text => {
-            console.log(text);
+    try{
+        fetch(`http://localhost:3000/map/1`, {
+            method: 'DELETE',
+            body: JSON.stringify(Data),
+            headers: {
+                Accept: 'application.json',
+                'Content-Type': 'application/json'
+            },
+            Cache: 'default'
         })
+            .then(r => r.text())
+            .then(text => {
+                console.log(text);
+            })
+    }catch(e){
+        console.log("Something went wrong");
+    }
+
 })
 
 const btn = document.querySelectorAll(".btn");
@@ -274,8 +295,55 @@ btn.forEach(b => {
         const id = b.id;
         console.log(id);
 
-        fetch(`http://localhost:3000/mapData/${id}`, {
-            method: 'PUT',
+        try{
+            fetch(`http://localhost:3000/mapData/${id}`, {
+                method: 'PUT',
+                body: JSON.stringify({}),
+                headers: {
+                    Accept: 'application.json',
+                    'Content-Type': 'application/json'
+                },
+                Cache: 'default'
+            })
+                .then(r => r.json())
+                .then(text => {
+
+                    console.log(text.title);
+
+                    const title = document.getElementById('mapTitle');
+                    const creationDate = document.getElementById('mapCreationDate');
+                    const creator = document.getElementById('mapCreator');
+
+                    title.textContent = text.title;
+                    creationDate.textContent = "Year of Creation: --- " + text.creationDate + " ---";
+                    creator.textContent = "Author : --- " + text.creator + " ---";
+
+                    const description = document.getElementById('mapDescription');
+                    const distortion = document.getElementById('mapDistortion');
+                    const graticule = document.getElementById('mapGraticule');
+                    const usage = document.getElementById('mapUsage');
+
+                    description.textContent = text.description;
+                    distortion.textContent = text.distortion;
+                    graticule.textContent = text.graticule;
+                    usage.textContent = text.usage;
+
+                    const Image = document.getElementById('mapImg');
+                    Image.src = text.pathToImage;
+
+                })
+        }catch(e){
+            console.log("Something went wrong");
+        }
+
+    })
+})
+
+document.addEventListener("DOMContentLoaded", function (event){
+
+    try{
+        fetch(`http://localhost:3000/mapData/01`, {
+            method: 'POST',
             body: JSON.stringify({}),
             headers: {
                 Accept: 'application.json',
@@ -283,75 +351,37 @@ btn.forEach(b => {
             },
             Cache: 'default'
         })
-        .then(r => r.json())
-        .then(text => {
+            .then(r => r.json())
+            .then(text => {
 
-            console.log(text.title);
+                console.log(text.title);
 
-            const title = document.getElementById('mapTitle');
-            const creationDate = document.getElementById('mapCreationDate');
-            const creator = document.getElementById('mapCreator');
+                const title = document.getElementById('mapTitle');
+                const creationDate = document.getElementById('mapCreationDate');
+                const creator = document.getElementById('mapCreator');
 
-            title.textContent = text.title;
-            creationDate.textContent = "Year of Creation: --- " + text.creationDate + " ---";
-            creator.textContent = "Author : --- " + text.creator + " ---";
+                title.textContent = text.title;
+                creationDate.textContent = "Year of Creation: --- " + text.creationDate + " ---";
+                creator.textContent = "Author : --- " + text.creator + " ---";
 
-            const description = document.getElementById('mapDescription');
-            const distortion = document.getElementById('mapDistortion');
-            const graticule = document.getElementById('mapGraticule');
-            const usage = document.getElementById('mapUsage');
+                const description = document.getElementById('mapDescription');
+                const distortion = document.getElementById('mapDistortion');
+                const graticule = document.getElementById('mapGraticule');
+                const usage = document.getElementById('mapUsage');
 
-            description.textContent = text.description;
-            distortion.textContent = text.distortion;
-            graticule.textContent = text.graticule;
-            usage.textContent = text.usage;
+                description.textContent = text.description;
+                distortion.textContent = text.distortion;
+                graticule.textContent = text.graticule;
+                usage.textContent = text.usage;
 
-            const Image = document.getElementById('mapImg');
-            Image.src = text.pathToImage;
+                const Image = document.getElementById('mapImg');
+                Image.src = text.pathToImage;
 
-        })
-    })
-})
+            })
+    }catch(e){
+        console.log("Something went wrong");
+    }
 
-document.addEventListener("DOMContentLoaded", function (event){
-
-
-    fetch(`http://localhost:3000/mapData/01`, {
-        method: 'POST',
-        body: JSON.stringify({}),
-        headers: {
-            Accept: 'application.json',
-            'Content-Type': 'application/json'
-        },
-        Cache: 'default'
-    })
-        .then(r => r.json())
-        .then(text => {
-
-            console.log(text.title);
-
-            const title = document.getElementById('mapTitle');
-            const creationDate = document.getElementById('mapCreationDate');
-            const creator = document.getElementById('mapCreator');
-
-            title.textContent = text.title;
-            creationDate.textContent = "Year of Creation: --- " + text.creationDate + " ---";
-            creator.textContent = "Author : --- " + text.creator + " ---";
-
-            const description = document.getElementById('mapDescription');
-            const distortion = document.getElementById('mapDistortion');
-            const graticule = document.getElementById('mapGraticule');
-            const usage = document.getElementById('mapUsage');
-
-            description.textContent = text.description;
-            distortion.textContent = text.distortion;
-            graticule.textContent = text.graticule;
-            usage.textContent = text.usage;
-
-            const Image = document.getElementById('mapImg');
-            Image.src = text.pathToImage;
-
-        })
 })
 
 
