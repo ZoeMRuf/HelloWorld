@@ -253,8 +253,61 @@ btn.forEach(b => {
         document.getElementById('WorldMap').scrollIntoView();
         const id = b.id;
         console.log(id);
-        console.log(JsonMaps);
 
+        fetch(`http://localhost:3000/mapData/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify({}),
+            headers: {
+                Accept: 'application.json',
+                'Content-Type': 'application/json'
+            },
+            Cache: 'default'
+        })
+        .then(r => r.json())
+        .then(text => {
+
+            console.log(text);
+
+            const MapInfo = document.getElementById('MapInfo');
+
+            //MapInfo.replaceChildren()
+
+            const title = document.createElement('h3');
+            const creationDate = document.createElement('p');
+            const creator = document.createElement('p');
+
+            title.textContent = text.title;
+            creationDate.textContent = text.creationDate;
+            creator.textContent = text.creator;
+
+            const Text = document.createElement('div');
+
+            const description = document.createElement('p');
+            const distortion = document.createElement('p');
+            const graticule = document.createElement('p');
+            const usage = document.createElement('p')
+
+            description.textContent = text.description;
+            distortion.textContent = text.distortion;
+            graticule.textContent = text.graticule;
+            usage.textContent = text.usage;
+
+            Text.append(description, distortion, graticule, usage);
+            MapInfo.append(title, creationDate, creator, Text)
+
+
+            const MapImage = document.getElementById('MapImage');
+
+            const Image = document.createElement('img');
+                Image.src = text.pathToImage;
+
+            MapImage.append(Image);
+
+
+
+
+
+        })
     })
 })
 

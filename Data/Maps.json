@@ -1,19 +1,18 @@
 
-{"01": {
+{
+  "01": {
   "creationDate":"1889",
   "creator":"David A. Aitoff",
+  "pathToImage": "../map_images/Aitoff.png",
+  "title": "Aitoff Projection",
   "infoText": {
     "description": "The Aitoff projection is a modified azimuthal projection. It is a compromise projection whose graticule takes the form of an ellipse. This projection is appropriate for small-scale mapping of the world. It was developed by Russian cartographer David A. Aitoff in 1889.",
     "distortion": "The Aitoff projection is neither conformal nor equal-area. That means that shapes, areas, distances, directions, and angles are all somewhat distorted. Scale is correct along the equator and the central meridian. Distortion values are symmetric across the equator and the central meridian.",
     "graticule": "The meridians are equally spaced and concave toward the central meridian. The central meridian is a straight line and half the length of the equator. The parallels are equally spaced curves, concave toward the poles. The projection outline forms a shape of an ellipse. The poles are presented as points, and they are co-vertices of the ellipse (located on the minor axis). The graticule is symmetric across the equator and the central meridian.",
     "usage": "The projection is appropriate for small-scale mapping not requiring accurate area measurements."
-  },
-  "pathToImage": "../images/map_images/Aitoff.png",
-  "title": "Aitoff Projection"
-},
+  }},
 
-
-"02": {
+  "02": {
   "creationDate":"1880",
   "creator":"Hermann Berghaus",
   "infoText": {
@@ -25,19 +24,6 @@
   "pathToImage": "../map_images/Berghaus's_star.png",
   "title": "Berghaus Star Projection"
 },
-
-  "03": {
-    "creationDate":"2018",
-    "creator":"Tom Patterson, Bernhard Jenny and Bojan Šavrič",
-    "infoText": {
-      "description": "Equal Earth is an equal-area pseudocylindrical projection for world maps. Its land features have a pleasing appearance, and its shape is similar to the Robinson projection. The projection was jointly developed by Tom Patterson, Bernhard Jenny, and Bojan Šavrič in 2018, and it was quickly adopted by the NASA Goddard Institute for Space Studies (GISS).",
-      "distortion": "Equal Earth is an equal-area (equivalent) projection. Shapes, directions, angles, and distances are distorted and stretched north-south in tropical and mid-latitude areas. Nearer the poles, features are compressed in the north-south direction. Distortion values are symmetric across the equator and the central meridian.",
-      "graticule": "Equal Earth is a pseudocylindric projection. All parallels, the central meridian, and both poles are presented as straight lines. The parallels are unequally spaced. The meridians are equally spaced and other than the central meridian are curved outward. The poles are 0.59247 times the length of the equator. The graticule is symmetric across the equator and the central meridian.",
-      "usage": "The projection is appropriate for small-scale mapping, especially for thematic world maps illustrating area characteristics and analysis requiring accurate areas."
-    },
-    "pathToImage": "../map_images/equal_earth.png",
-    "title": "Equal Earth Projection"
-  },
 
   "03": {
     "creationDate":"2018",
