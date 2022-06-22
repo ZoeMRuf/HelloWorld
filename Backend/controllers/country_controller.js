@@ -16,7 +16,6 @@ class CountryController{
             res.status(404).send("There is already a country");
         }
     }
-
 }
 
 module.exports = new CountryController();

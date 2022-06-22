@@ -14,5 +14,4 @@ routes.get('/feedback',function(req,res){
 
 routes.post('/map/:country', controller.createCountry);
 
-
 module.exports = routes;

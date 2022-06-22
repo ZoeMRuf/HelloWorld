@@ -179,7 +179,7 @@ main #Countries div{
 }
 
 .block {
-    border: 5px dotted #1C77C3;
+    border: 5px dotted #c2e812;
     border-radius: 15px;
     margin: 5px 5px;
     padding: 0 15px;
@@ -187,13 +187,11 @@ main #Countries div{
 
 #MapImage {
     border: 5px dotted #89043d;
-    background-color: #262626;
-    color: floralwhite;
+    background-color: whitesmoke;
 }
 #MapInfo {
-    border: 5px dotted #c2e812;
-    background-color: #262626;
-    color: floralwhite;
+    border: 5px dotted #89043d;
+    background-color: whitesmoke;
 }
 
 h2 {
