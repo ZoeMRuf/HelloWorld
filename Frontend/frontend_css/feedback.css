@@ -9,6 +9,7 @@ textarea {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* Media-Query to make the Website responsive */
 @media screen and (max-width:400px) {
     #overall-impression-smaller {
         font-size: xx-small;

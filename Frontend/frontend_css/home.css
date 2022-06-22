@@ -200,6 +200,7 @@ address {
     padding: 5px 10px;
 }
 
+/* Media-Query to make the Website responsive */
 @media screen and (max-width: 600px) {
     header::before {
         background-size: auto;
@@ -231,3 +232,5 @@ address {
     }
 
 }
+
+
