@@ -129,5 +129,16 @@
     "pathToImage": "../map_images/Wagner_IV.png",
     "title": "Wagner IV Projection"
   },
-"10": {}}
-
+"10": {
+  "creationDate":"1921",
+  "creator":"Oswald Winkel",
+  "infoText": {
+    "description": "The Winkel Tripel is a compromise modified azimuthal projection for world maps. It is an arithmetic mean of projected coordinates of Aitoff and equidistant cylindrical projections. The projection is known to have one of the lowest mean scale and area distortions among compromise projections for small-scale mapping. It has been used by the National Geographic Society since 1998 for general world maps. The Winkel Tripel projection was introduced by Oswald Winkel in 1921. In his original design, Winkel used a standard parallel at 50°28ʹ. Inverse equations were developed at Esri.",
+    "distortion": "The Winkel Tripel projection is neither conformal nor equal-area. It generally distorts shapes, areas, distances, directions, and angles. The scale is constant along the equator and true along the central meridian. As with most compromise projections, Winkel Tripel exaggerates polar areas. This projection has low mean scale and area distortion. Distortion values are symmetric across the equator and the central meridian.",
+    "graticule": "Winkel Tripel is a modified azimuthal projection. The equator and the central meridian are projected as straight lines. The other meridians are complex curves, concave toward the central meridians and equally spaced along the equator. The parallels are equally spaced along the central meridian and concave toward the nearest pole. Both poles project as straight lines. The lengths of the central meridian and both pole lines depend on the position of the standard parallel. The graticule is symmetric across the equator and the central meridian.",
+    "usage": "The Winkel Tripel projection is appropriate for general world maps. A variant with a standard parallel at 50°28' has been used by the National Geographic Society since 1998."
+  },
+  "pathToImage": "../map_images/Winkel_tripel.png",
+  "title": "Winkel Tripel Projection"
+}
+}
