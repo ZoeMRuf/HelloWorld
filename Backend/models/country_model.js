@@ -34,6 +34,7 @@ class CountryModel{
 
 
         //takes longitude and latitude and returns country code
+        //https://locationiq.com/ (geocoding api to get country code with coordinates(latitude and longitude)
         fetch(`https://us1.locationiq.com/v1/reverse?key=${this.API_KEY}&lat=${lat}&lon=${lon}&format=json`)
             .then((response) => {
                 if(response.ok){
@@ -50,7 +51,7 @@ class CountryModel{
                 console.log("Something went wrong with the foreign API's 1");
             })
             .then(countryCode => {
-                fetch(`https://restcountries.com/v3.1/alpha/${this.countryCode}`)
+                fetch(`https://restcountries.com/v3.1/alpha/${this.countryCode}`)  //https://restcountries.com/ (api to get country information with country code)
                     .then((response) => {
                         if (response.ok) {
                             return response.json();
