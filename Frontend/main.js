@@ -38,7 +38,7 @@ map.on('load', () => {
         'source': 'country-boundaries',
         'layout': {},
         'paint': {
-            'fill-color': '#0096f0',
+            'fill-color': '#aeaeae', //#0096f0
             'fill-opacity': 0.5
         }
     },
@@ -52,7 +52,7 @@ map.on('load', () => {
         'source': 'country-boundaries',
         'layout': {},
         'paint': {
-            'line-color': '#0082ff',
+            'line-color': '#262626', //#0082ff
             'line-width': 2
         }
     },
@@ -303,7 +303,6 @@ const btn = document.querySelectorAll(".btn");
 //Map buttons
 btn.forEach(b => {
     b.addEventListener('click', (event) => {
-        document.getElementById('WorldMap').scrollIntoView();
         const id = b.id;
         console.log(id);
 
@@ -347,6 +346,9 @@ btn.forEach(b => {
         }catch(e){
             console.log("Something went wrong");
         }
+        setTimeout(function(){
+            document.getElementById('WorldMap').scrollIntoView();
+        }, 400);
 
     })
 })
