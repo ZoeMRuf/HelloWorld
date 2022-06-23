@@ -4,7 +4,7 @@ const model = require("../models/country_model");
 const mapData = require("../models/mapData_model");
 
 class CountryController{
-    static MANDATORY = ["name", "population", "surface_area", "region"];
+    //static MANDATORY = ["name", "population", "surface_area", "region"];
 
     //checks if the ID is already taken
     checkCountry(){

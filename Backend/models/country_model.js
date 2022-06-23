@@ -25,13 +25,15 @@ class CountryModel{
 
     }
 
-    //first it takes in latetude and longitude to get the country code and in the second api the country code is used to get the country information and saved into the object
+    //first it takes in latitude and longitude to get the country code and in the second api the country code is used to get the country information and saved into the object
     createCountry(country, body) {
 
         let lat = body.countryLat;
         let lon = body.countryLng;
         let localState = body.id;
 
+
+        //takes longitude and latitude and returns country code
         fetch(`https://us1.locationiq.com/v1/reverse?key=${this.API_KEY}&lat=${lat}&lon=${lon}&format=json`)
             .then((response) => {
                 if(response.ok){

@@ -66,7 +66,7 @@ map.on('load', () => {
         "source": "country-boundaries",
         "layout": {},
         "paint": {
-            "fill-color": "#00f096",
+            "fill-color": "#c2e812",
             "fill-opacity": 1
         },
         "filter": ["==", "name", ""]
