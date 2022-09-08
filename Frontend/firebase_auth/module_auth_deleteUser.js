@@ -6,13 +6,19 @@ import { getAuth, deleteUser} from "https://www.gstatic.com/firebasejs/9.8.3/fir
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyDtDXXiHIAyEcraPlIcJhxCsWofuetO-pU",
-    authDomain: "helloworld-ea756.firebaseapp.com",
-    projectId: "helloworld-ea756",
-    storageBucket: "helloworld-ea756.appspot.com",
-    messagingSenderId: "421368849663",
-    appId: "1:421368849663:web:7f6cb76ffde540444258ca"
+const firebaseConfig = {apiKey: "AIzaSyC14P7M1SHnLB-KyTflMTdmq2ZfotcP5S0",
+
+    authDomain: "helloworldnachpr.firebaseapp.com",
+
+    projectId: "helloworldnachpr",
+
+    storageBucket: "helloworldnachpr.appspot.com",
+
+    messagingSenderId: "272296957922",
+
+    appId: "1:272296957922:web:ade80cde4d53a7c2198bbb",
+
+    measurementId: "G-J7YSJM4SNQ"
 };
 
 // Initialize Firebase
